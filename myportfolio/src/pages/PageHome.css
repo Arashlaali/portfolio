@@ -1,0 +1,179 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navbar-ul {
+    display: flex;
+}
+
+.navbar-ul li {
+    margin: 0 1rem;
+}
+
+.navbar-ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section Styles */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    padding-top: 5rem;
+    /* To push content below the navbar */
+}
+
+#home img {
+    width: 300px;
+    height: 250px;
+    border-radius: 30%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid #f39c12;
+}
+
+.self-bio {
+    margin-top: 2rem;
+}
+
+.self-bio h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.self-bio p {
+    font-size: 1.5rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact span {
+    font-size: 2rem;
+}
+
+.socialmedia {
+    margin-top: 2rem;
+}
+
+.socialmedia a {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.socialmedia a:hover {
+    color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar h2 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-ul li {
+        margin: 0 0.8rem;
+    }
+
+    .self-bio h1 {
+        font-size: 2.5rem;
+    }
+
+    .self-bio p {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    #home img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact p {
+        font-size: 1.1rem;
+    }
+}
