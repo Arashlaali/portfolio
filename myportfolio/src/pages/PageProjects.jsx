@@ -9,11 +9,11 @@ function PageProjects() {
     return (
         <main id="projects">
             <div id='container'>
+                <div className='projects-title'>
+                    <p> Featured</p>
+                    <p> Projects</p>
+                </div>
                 <div id='portfolio'>
-                    <div className='projects-title'>
-                        <p> Featured</p>
-                        <p> Projects</p>
-                    </div>
                     <div className='projects-flex'>
                         <div className='projects-individual'>
                             <img className="project-image" src={movieImage} alt="moviedata base" />
