@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr;
     /* Single column layout */
-    gap: 2rem;
+    gap: 1rem;
     /* Space between sections */
     padding: 2rem;
     max-width: 1200px;
@@ -20,16 +20,25 @@
 /* For larger screens, adjust the grid layout to display two columns */
 @media (min-width: 768px) {
     .about-me {
+        display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         /* Two columns layout */
         grid-template-areas:
-            " about-article work-education";
+            "about-article work";
         /* Display work-education div before the about-article */
+        gap: 2rem;
+        /* Add gap between divs */
+        max-width: 80%;
+        /* Make the grid take 80% of the screen width */
+        margin: 0 auto;
+        /* Center the grid horizontally */
     }
 
-    .work-education {
-        grid-area: work-education;
+    .work {
+        grid-area: work;
     }
+
 
     .about-article {
         grid-area: about-article;
@@ -78,7 +87,14 @@
 }
 
 /* Work section styling */
-.work-education {
+.work {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education {
     background-color: #f9f9f9;
     padding: 2rem;
     border-radius: 8px;
@@ -86,7 +102,8 @@
 }
 
 /* Work heading */
-.work-education h3 {
+h3 {
+    text-align: center;
     font-family: 'Arial', sans-serif;
     font-size: 2rem;
     color: #333;
@@ -94,9 +111,9 @@
 }
 
 /* Work company heading styling */
-.work-education h4 {
+h4 {
     font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #333;
     margin-bottom: 0.5rem;
 }
