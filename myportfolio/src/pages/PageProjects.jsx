@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './PageProjects.css';  // Import your custom CSS for styling
 import Navbar from '../components/Navbar';
 import movieImage from '../images/movie.png';
+import shoppifyImage from '../images/shoppify.png';
 
 function PageProjects() {
 
@@ -27,15 +28,14 @@ function PageProjects() {
                                 <li> GitHub API</li>
                             </ul>
                         </div>
-                        <div className='projects-icon'>
 
-                        </div>
                     </div>
 
                 </div>
 
 
             </div>
+
         </main>
     );
 }
