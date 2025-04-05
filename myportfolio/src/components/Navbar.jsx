@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
     return (
         <nav className="navbar" >
-            <h2> Portfolio</h2>
+            <h2> ARASH LAALI</h2>
             <ul className="navbar-ul">
                 <li>
                     <Link to="/">HOME</Link>
