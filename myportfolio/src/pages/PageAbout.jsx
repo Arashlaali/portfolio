@@ -10,8 +10,8 @@ function PageAbout() {
             <section className='about'>
                 <div className='about-me'>
                     <article className='about-article'>
-                        <h3>About me </h3>
                         <div>
+                            <h3>About me </h3>
                             <p className='about-intro'> My name is Arash ,I am a qualified and professional web
                                 developer recently graduated from
                                 BCIT in Front-End Web Development
