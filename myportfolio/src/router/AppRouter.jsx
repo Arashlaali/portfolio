@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Im
 import PageHome from '../pages/PageHome'; // Import the PageHome component
 import Navbar from '../components/Navbar';
 import PageAbout from '../pages/PageAbout'; // Import the PageAbout component
+import PageProjects from '../pages/PageProjects';
 
 function AppRouter() {
     return (
@@ -13,6 +14,7 @@ function AppRouter() {
                 {/* Define routes and associate with components */}
                 <Route path="/" element={<PageHome />} /> {/* Home page route */}
                 <Route path="/about" element={<PageAbout />} />
+                <Route path="/projects" element={<PageProjects />} />
             </Routes>
         </Router>
     );

@@ -1,0 +1,128 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up the container */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Portfolio Section */
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    /* Set the portfolio width to 80% of the screen */
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Featured Projects title style (aligned to the left) */
+.projects-title {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    /* Use Roboto font for the title */
+}
+
+.projects-title p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Projects Flex - Centered in the middle of the page */
+.projects-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Space between projects */
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+    width: 100%;
+    /* Ensure it takes full width available */
+    text-align: center;
+    /* Align the text in each sub-div to the center */
+}
+
+/* Individual Project Style */
+.projects-individual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /* Space between image and bio */
+}
+
+/* Bio under the image */
+.projects-bio {
+    text-align: center;
+    /* Center the bio text */
+    max-width: 300px;
+    font-family: 'Lora', serif;
+    /* Use Lora font for the bio */
+}
+
+.projects-bio p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.projects-bio ul {
+    list-style: none;
+    display: flex;
+    /* Make the list items appear in a horizontal line */
+    padding: 0;
+    gap: 15px;
+    /* Space between list items */
+    justify-content: center;
+    /* Center align the list items horizontally */
+}
+
+.projects-bio ul li {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 2px 2px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Optional: Projects Icon (if you plan to use it) */
+.projects-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+    .projects-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-bio {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .projects-bio ul {
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+    }
+}
