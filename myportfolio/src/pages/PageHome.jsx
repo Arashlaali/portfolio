@@ -1,31 +1,44 @@
-// Import necessary libraries and styles
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './PageHome.css';  // Import your custom CSS for styling
 import Navbar from '../components/Navbar';
 import portraitImage from '../images/myportrait.jpg'; // Import your portrait image
 
+
+
 function PageHome() {
+
+
+
+    useEffect(() => {
+        const canvas = document.querySelector('.vanta-canvas');
+
+    }, []);
+
 
     return (
         <main id="home">
+            {/* Canvas background */}
+            <canvas className="vanta-canvas" width="519" height="872" style={{ position: 'absolute', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%' }}></canvas>
+
             <section className='greetings'>
                 <div className='greeting_box'>
                     <img className="portrait" src={portraitImage} alt="my portrait" />
                     <div className='greeting_message'>
                         <div className="greeting_name">
-                            <h1>Hello , I'm</h1>
+                            <h1>Hello, I'm</h1>
                             <h2>ARASH LAALI</h2>
                         </div>
                         <p className='fade-in'>Software Developer</p>
-                        <p className='fade-in'>currently based in Berlin , Germany </p>
+                        <p className='fade-in'>currently based in Berlin, Germany</p>
                     </div>
-
                 </div>
 
                 <hr />
-                <h3> Interested to know me better?</h3>
-                <p className='contact_text'>Please feel free to contact me via LinkedIn or Email. I’m always looking forward to an insightful conversation over coffee!
-                    <span>☕</span> </p>
+                <h3>Interested to know me better?</h3>
+                <p className='contact_text'>
+                    Please feel free to contact me via LinkedIn or Email. I’m always looking forward to an insightful conversation over coffee!
+                    <span>☕</span>
+                </p>
                 <div className='socialmedia'>
                     <a href="https://www.linkedin.com/in/arash-laali-03746b31/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
