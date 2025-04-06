@@ -9,24 +9,23 @@
 body {
     background-color: #f7f7f7;
     color: #333;
-    font-size: 16px;
     line-height: 1.6;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-h1,
-h2,
-h3 {
-    font-weight: 500;
+/* Canvas Background */
+.vanta-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Navbar Styles */
@@ -75,59 +74,105 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    /* Default: stack vertically on mobile */
+    height: 80vh;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    padding-top: 5rem;
-    /* To push content below the navbar */
+    position: relative;
+    /* Ensures it stays above the canvas */
 }
 
-#home img {
-    width: 300px;
+.greetings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.greeting_box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* 2-column grid: image on the left (1fr) and headings on the right (2fr) */
+    gap: 2rem;
+    /* Space between columns */
+    align-items: center;
+    /* Align items vertically in the center */
+    width: 100%;
+    text-align: left;
+    /* Text aligned to the left */
+}
+
+#home img.portrait {
+    width: 250px;
     height: 250px;
-    border-radius: 30%;
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
     border: 2px solid #f39c12;
 }
 
-.self-bio {
-    margin-top: 2rem;
+.greeting_message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
 }
 
-.self-bio h1 {
+.greeting_name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.greeting_name h1 {
     font-size: 3rem;
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
-.self-bio p {
-    font-size: 1.5rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Contact Section Styles */
-.contact {
-    background-color: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.contact h2 {
+.greeting_name h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    color: rgb(222, 72, 72);
+    margin-top: 1rem;
+    position: relative;
+    /* Space between h1 and h2 */
+    margin-left: 100px;
+    /* Shift h2 slightly to the right */
+}
+
+.fade-in {
+    opacity: 10;
+    animation: fadeIn 4s forwards;
+    position: relative;
+    margin-left: 100px;
+    /* Space between h2 and fade-in text */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.greetings p {
+    font-size: 1.2rem;
     color: #333;
 }
 
-.contact p {
-    font-size: 1.3rem;
-    color: #666;
-    margin-bottom: 2rem;
+.greetings h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.contact span {
-    font-size: 2rem;
+.contact_text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
 .socialmedia {
@@ -145,35 +190,53 @@ h3 {
     color: #f39c12;
 }
 
+.email {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+hr {
+    width: 100%;
+    margin: 2rem 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar h2 {
-        font-size: 1.5rem;
+    #home {
+        flex-direction: column;
+        /* Stack the content vertically on smaller screens */
+        text-align: center;
     }
 
-    .navbar-ul li {
-        margin: 0 0.8rem;
+    .greeting_box {
+        display: flex;
+        flex-direction: column;
+        /* Stack image and text vertically */
+        align-items: center;
+        /* Center everything */
+        gap: 1rem;
+        /* Reduced gap for mobile */
     }
 
-    .self-bio h1 {
+    #home img.portrait {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1rem;
+        /* Space between the image and text */
+    }
+
+    .greeting_name h1 {
         font-size: 2.5rem;
     }
 
-    .self-bio p {
-        font-size: 1.2rem;
-        max-width: 90%;
-    }
-
-    #home img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .contact h2 {
+    .greeting_name h2 {
         font-size: 2rem;
     }
 
-    .contact p {
-        font-size: 1.1rem;
+    .fade-in {
+        font-size: 1rem;
     }
 }
