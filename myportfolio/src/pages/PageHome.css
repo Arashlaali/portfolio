@@ -15,7 +15,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
 }
 
 /* Navbar Styles */
@@ -86,14 +85,10 @@ body {
 .greeting_box {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    /* 2-column grid: image on the left (1fr) and headings on the right (2fr) */
     gap: 2rem;
-    /* Space between columns */
     align-items: center;
-    /* Align items vertically in the center */
     width: 100%;
     text-align: center;
-    /* Text aligned to the left */
 }
 
 #home img.portrait {
@@ -116,11 +111,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center the headings horizontally */
     justify-content: center;
     width: 100%;
     position: absolute;
-    /* Positioning it over the video */
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -206,8 +200,9 @@ hr {
 }
 
 .bg-video {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+
 }
 
 video {
