@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './PageHome.css';  // Import your custom CSS for styling
 import Navbar from '../components/Navbar';
 import portraitImage from '../images/myportrait.jpg'; // Import your portrait image
+import videoBg from '../assets/bg-movie.mp4'; // Import your video background
 
 
 
@@ -17,12 +18,11 @@ function PageHome() {
 
     return (
         <main id="home">
-            {/* Canvas background */}
-            <canvas className="vanta-canvas" width="519" height="872" style={{ position: 'absolute', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%' }}></canvas>
-
-            <section className='greetings'>
+            <div className='bg-video'>
+                <div className='overlay'></div>
+                <video src={videoBg} autoPlay loop muted />
                 <div className='greeting_box'>
-                    <img className="portrait" src={portraitImage} alt="my portrait" />
+                    {/* <img className="portrait" src={portraitImage} alt="my portrait" /> */}
                     <div className='greeting_message'>
                         <div className="greeting_name">
                             <h1>Hello, I'm</h1>
@@ -32,6 +32,9 @@ function PageHome() {
                         <p className='fade-in'>currently based in Berlin, Germany</p>
                     </div>
                 </div>
+            </div>
+
+            <section className='greetings'>
 
                 <hr />
                 <h3>Interested to know me better?</h3>
