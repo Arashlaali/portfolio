@@ -28,8 +28,10 @@ function PageHome() {
                             <h1>Hello, I'm</h1>
                             <h2>ARASH LAALI</h2>
                         </div>
-                        <p className='fade-in'>Software Developer</p>
-                        <p className='fade-in'>currently based in Berlin, Germany</p>
+                        <div className='fade-in'>
+                            <p >Software Developer</p>
+                            <p>currently based in Berlin, Germany</p>
+                        </div>
                     </div>
                 </div>
             </div>
