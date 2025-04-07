@@ -67,15 +67,12 @@
     color: white;
     padding: 5px 10px;
     position: absolute;
-    /* Position over the image */
     bottom: 100px;
-    /* Position near the bottom of the image */
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     /* Initially hidden */
     transition: opacity 0.3s ease-in-out;
-    /* Smooth transition */
 }
 
 /* Show title on hover */

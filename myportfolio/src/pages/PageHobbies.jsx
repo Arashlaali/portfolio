@@ -28,11 +28,11 @@ function PageHobbies() {
                     </div>
                     <div className='image-inner'>
                         <img src={peakImage} alt="burner in the dust" />
-                        <div className='image-title'>Hiking in the Rockie mountains</div>
+                        <div className='image-title'>Peak of the Kolakchal mountain</div>
                     </div>
                     <div className='image-inner'>
                         <img src={highAttitudeImage} alt="burner in the dust" />
-                        <div className='image-title'>Hiking in the Rockie mountains</div>
+                        <div className='image-title'> Last few steps before the peak</div>
                     </div>
                 </div>
 
