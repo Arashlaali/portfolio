@@ -9,24 +9,29 @@ function PageAbout() {
         <main id="about">
             <section className='about'>
                 <div className='about-me'>
-                    <article className='about-article'>
-                        <div>
+                    <div className='me'>
+                        <article className='about-article'>
                             <h3>About me </h3>
-                            <p className='about-intro'> My name is Arash ,I am a qualified and professional web
-                                developer recently graduated from
-                                BCIT in Front-End Web Development
-                                program. Currently working as Fashion photographer, with strong creative and
-                                analytical skills, and with 7 years of
-                                mechanical engineering work
-                                experience, Team player with an eye for
-                                detail.</p>
-                        </div>
-                        <div className='freetime'>
-                            <h4> Being creative in my free time</h4>
-                            <p className='freetime-intro'>In my free time I spend tons of times exploring arts, attending photography workshops, backcountry camping, travelling to explore historical artistic landscapes and etc.</p>
-                        </div>
+                            <div>
+                                <p className='about-intro'> My name is Arash ,I am a qualified and professional web
+                                    developer recently graduated from
+                                    BCIT in Front-End Web Development
+                                    program. Currently working as Fashion photographer, with strong creative and
+                                    analytical skills, and with 7 years of
+                                    mechanical engineering work
+                                    experience, Team player with an eye for
+                                    detail.</p>
+                            </div>
+                            <div className='freetime'>
+                                <h4> Being creative in my free time</h4>
+                                <p className='freetime-intro'>In my free time I spend tons of times exploring arts, attending photography workshops, backcountry camping, travelling to explore historical artistic landscapes and etc.</p>
+                            </div>
 
-                    </article>
+                        </article>
+
+                    </div>
+
+
 
                     <div className='work'>
                         <article className='about-article'>
