@@ -63,14 +63,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* Default: stack vertically on mobile */
     height: 80vh;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     position: relative;
-    /* Ensures it stays above the canvas */
 }
 
 .greetings {
@@ -99,55 +97,52 @@ body {
     border: 2px solid #f39c12;
 }
 
+/* Make greeting_message relative to the video */
 .greeting_message {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-}
-
-.greeting_name {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     position: absolute;
-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Center content */
+    text-align: center;
+}
+
+/* Position greeting_name based on the container */
+.greeting_name {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    text-align: center;
 }
 
 .greeting_name h1 {
     font-size: 3rem;
     color: #ffffff;
     margin-bottom: 0;
-
+    padding: 0;
 }
 
 .greeting_name h2 {
     font-size: 2.5rem;
     color: rgb(222, 72, 72);
     margin-top: 1rem;
-    position: relative;
-    /* Space between h1 and h2 */
-    margin-left: 150px;
-    /* Adjust the slight right positioning */
+    padding-top: 0;
 }
 
 .fade-in {
-    width: 100%;
-    opacity: 8;
+    opacity: 0;
     animation: fadeIn 4s forwards;
-    position: relative;
-    margin-top: 175px;
-    margin-left: 375px;
-    /* Add space below h2 */
     font-size: 1.2rem;
     color: #ffffff;
+    position: relative;
+    top: 1.5rem;
+    text-align: center;
+    transform: none;
 }
 
 @keyframes fadeIn {
@@ -202,7 +197,6 @@ hr {
 .bg-video {
     width: 100vw;
     height: 100vh;
-
 }
 
 video {
@@ -228,35 +222,49 @@ video {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: -1;
-    /* Ensure the overlay is behind the content */
+    display: block;
+    /* Make sure it's initially visible on small screens */
 }
 
-
-
+/* Hide overlay on larger screens */
+@media (min-width: 769px) {
+    .overlay {
+        display: none !important;
+        /* Forcefully hide the overlay */
+    }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
     #home {
         flex-direction: column;
-        /* Stack the content vertically on smaller screens */
-        text-align: center;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
     }
 
     .greeting_box {
         display: flex;
         flex-direction: column;
-        /* Stack image and text vertically */
         align-items: center;
-        /* Center everything */
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
         gap: 1rem;
-        /* Reduced gap for mobile */
     }
 
     #home img.portrait {
         width: 150px;
         height: 150px;
         margin-bottom: 1rem;
-        /* Space between the image and text */
+    }
+
+    .greeting_message {
+        top: 50%;
+        /* Adjust the vertical position */
+        transform: translate(-50%, -50%);
+        /* Center it */
     }
 
     .greeting_name h1 {
@@ -265,9 +273,14 @@ video {
 
     .greeting_name h2 {
         font-size: 2rem;
+        margin-left: 0;
     }
 
     .fade-in {
         font-size: 1rem;
+        opacity: 1;
+        top: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
