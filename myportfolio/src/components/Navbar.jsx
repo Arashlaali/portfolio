@@ -32,7 +32,7 @@ function Navbar() {
                     <Link to="/projects">PROJECTS</Link>
                 </li>
                 <li>
-                    <Link to="/hobbies">HOBBIES</Link>
+                    <Link to="/photography">PHOTOGRAPHY</Link>
                 </li>
             </ul>
         </nav>
