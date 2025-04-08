@@ -11,7 +11,7 @@ import highAttitudeImage from '../images/highattitude.jpg'; // Import your high 
 function PagePhotography() {
 
     return (
-        <main id="hobbies">
+        <main id="photography">
             <div className='image-container'>
                 <div className='container-individual'>
                     <div className='image-inner'>
