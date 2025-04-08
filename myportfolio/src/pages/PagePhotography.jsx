@@ -1,6 +1,6 @@
 // Import necessary libraries and styles
 import React, { useState, useEffect } from 'react';
-import './PageHobbies.css';  // Import your custom CSS for styling
+import './PagePhotography.css';  // Import your custom CSS for styling
 import Navbar from '../components/Navbar';
 import hikingImage from '../images/hiking.png'; // Import your hiking image
 import campingImage from '../images/camping.jpg'; // Import your camping image
@@ -8,7 +8,7 @@ import burnerImage from '../images/burner.jpg'; // Import your burner image
 import peakImage from '../images/peak.jpg'; // Import your peak image
 import highAttitudeImage from '../images/highattitude.jpg'; // Import your high altitude image
 
-function PageHobbies() {
+function PagePhotography() {
 
     return (
         <main id="hobbies">
@@ -42,4 +42,4 @@ function PageHobbies() {
     );
 }
 
-export default PageHobbies;
+export default PagePhotography;
