@@ -17,84 +17,28 @@ body {
     position: relative;
 }
 
-/* Navbar Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 3rem;
-    background-color: #000;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-.navbar h2 {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.navbar-ul {
-    display: flex;
-}
-
-.navbar-ul li {
-    margin: 0 1rem;
-}
-
-.navbar-ul li a {
-    color: #fff;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar-ul li a:hover {
-    color: #f39c12;
-}
-
 /* Hero Section Styles */
 #home {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 80vh;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-}
-
-.greetings {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
+    /* Ensure it takes full viewport height */
     width: 100%;
+    position: relative;
     text-align: center;
 }
 
+/* Greeting Box */
 .greeting_box {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
     align-items: center;
     width: 100%;
+    height: 100%;
     text-align: center;
-}
-
-#home img.portrait {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #f39c12;
 }
 
 /* Make greeting_message relative to the video */
@@ -111,15 +55,16 @@ body {
     text-align: center;
 }
 
-/* Position greeting_name based on the container */
-.greeting_name {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    text-align: center;
+/* Portrait Image */
+#home img.portrait {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f39c12;
 }
 
+/* Greeting Text */
 .greeting_name h1 {
     font-size: 3rem;
     color: #ffffff;
@@ -131,6 +76,7 @@ body {
     font-size: 2.5rem;
     color: rgb(222, 72, 72);
     margin-top: 1rem;
+    margin-left: 300px;
     padding-top: 0;
 }
 
@@ -140,7 +86,8 @@ body {
     font-size: 1.2rem;
     color: #ffffff;
     position: relative;
-    top: 1.5rem;
+    top: 0;
+    margin-left: 300px;
     text-align: center;
     transform: none;
 }
@@ -151,49 +98,7 @@ body {
     }
 }
 
-.greetings p {
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.greetings h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.contact_text {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-
-.socialmedia {
-    margin-top: 2rem;
-}
-
-.socialmedia a {
-    font-size: 2rem;
-    color: #333;
-    margin: 0 1rem;
-    transition: color 0.3s ease;
-}
-
-.socialmedia a:hover {
-    color: #f39c12;
-}
-
-.email {
-    display: inline-block;
-    font-size: 1.1rem;
-    color: #333;
-    margin-top: 1rem;
-    text-decoration: underline;
-}
-
-hr {
-    width: 100%;
-    margin: 2rem 0;
-}
-
+/* Background Video */
 .bg-video {
     width: 100vw;
     height: 100vh;
@@ -205,15 +110,7 @@ video {
     object-fit: cover;
 }
 
-.greeting_box {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
@@ -222,16 +119,6 @@ video {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: -1;
-    display: block;
-    /* Make sure it's initially visible on small screens */
-}
-
-/* Hide overlay on larger screens */
-@media (min-width: 769px) {
-    .overlay {
-        display: none !important;
-        /* Forcefully hide the overlay */
-    }
 }
 
 /* Responsive Design */
@@ -248,39 +135,44 @@ video {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 1rem;
+        text-align: center;
         width: 100%;
         height: 100%;
-        text-align: center;
-        gap: 1rem;
     }
 
+    /* Portrait */
     #home img.portrait {
         width: 150px;
         height: 150px;
         margin-bottom: 1rem;
     }
 
+    /* Adjust Greeting Message on small screens */
     .greeting_message {
         top: 50%;
-        /* Adjust the vertical position */
+        left: 50%;
         transform: translate(-50%, -50%);
-        /* Center it */
+        /* Keep it centered */
     }
 
     .greeting_name h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .greeting_name h2 {
-        font-size: 2rem;
-        margin-left: 0;
+        font-size: 1.5rem;
     }
 
     .fade-in {
-        font-size: 1rem;
+        font-size: .75rem;
         opacity: 1;
-        top: 1.5rem;
-        left: 50%;
+        /* left: 50%; */
         transform: translateX(-50%);
+        position: relative;
+        top: 0;
+        margin-left: 300px;
+        text-align: center;
+        transform: none;
     }
 }
