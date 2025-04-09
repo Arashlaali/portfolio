@@ -13,7 +13,7 @@ function PagePhotography() {
                 // Dynamically import images using import()
                 try {
                     const image = await import(`../images/pic${i}.jpg`);
-                    imagesList.push({ src: image.default, title: `Image ${i}`, rowSpan: i % 5 === 0 ? 2 : 1 }); // Some images span 2 rows
+                    imagesList.push({ src: image.default, rowSpan: i % 5 === 0 ? 2 : 1 }); // Some images span 2 rows
                 } catch (error) {
                     console.error(`Error loading image pic${i}.jpg`, error);
                 }
