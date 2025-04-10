@@ -38,10 +38,11 @@ function PageHome() {
 
             <section className='greetings'>
 
-                <hr />
+
                 <div className='contact_me'>
 
                     <h3>Let's Chat</h3>
+                    <hr />
                     <p className='contact_text'>
                         Please feel free to contact me via LinkedIn or Email. I’m always looking forward to an insightful conversation over coffee!
                         <span>☕</span>
