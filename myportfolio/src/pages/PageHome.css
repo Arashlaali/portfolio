@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f7f7f7;
+    background-color: #000000;
     color: #ffffff;
     line-height: 1.6;
     min-height: 100vh;
@@ -131,9 +131,10 @@ video {
 
     max-width: 800px;
     /* Limit the width */
-    background-color: #ffffff;
+    background-color: #000000;
     /* Background for the box */
     border-radius: 10px;
+
     /* Rounded corners */
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -142,7 +143,7 @@ video {
     position: relative;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -152,7 +153,7 @@ video {
     /* Add gap between anchor links (social media and email links) */
 }
 
-.socialmedia {
+. .socialmedia {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,23 +165,41 @@ video {
 .greetings:hover {
     transform: scale(1.05);
     /* Slightly enlarge the box when hovering */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 12px rgba(178, 181, 180, 0.8);
     /* Add more prominent shadow on hover */
 }
 
+.contact_me h3 {
+    font-size: 2rem;
+    color: rgb(222, 72, 72);
+    margin-top: 0;
+    /* Space above the greeting text */
+    margin-bottom: 1rem;
+    /* Space below the greeting text */
+}
+
+.contact_me p {
+
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    /* Space above the contact text */
+}
+
+/* 
 .greetings hr {
     width: 100%;
     height: 1px;
     background-color: #333;
     /* Color of the horizontal line */
-    border: none;
-    margin: 0 0 1rem 0;
-    /* Space below the line */
+/* border: none;
+    margin: 0 0 1rem 0; */
+/* Space below the line */
 }
 
-.contact_text {
+*/ .contact_text {
     font-size: 1rem;
-    color: #333;
+    color: #fff;
     margin-top: 0;
     /* Space above the contact text */
 }
@@ -205,12 +224,7 @@ video {
         height: 100%;
     }
 
-    /* Portrait */
-    #home img.portrait {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 1rem;
-    }
+
 
     /* Adjust Greeting Message on small screens */
     .greeting_message {
@@ -251,21 +265,67 @@ video {
     }
 
     .greetings a {
-        margin: 0.3rem;
+        margin-top: 0;
+        ;
+        margin: 0.5rem;
         /* Reduced gap between anchor links on small screens */
     }
 
+    .greetings h3 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        /* Adjust the font size of the greeting text */
+    }
 
     /* Adjust the contact text font size on small screens */
     .contact_text {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         color: #333;
+
+
         /* Smaller font size */
+    }
+
+    .contact_me h3 {
+        font-size: 1.5rem;
+        margin-top: 0;
+        /* Space above the greeting text */
+        margin-bottom: 0;
+        /* Space below the greeting text */
+    }
+
+    .contact_me p {
+        font-size: .8rem;
+        margin-top: 0;
+        /* Space above the greeting text */
+        margin-bottom: .2rem;
+        /* Space below the greeting text */
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        /* Space between social media icons */
+    }
+
+    .email {
+        font-size: 0.8rem;
+        color: #fff;
+        /* Change the text color to black */
+        padding-bottom: 2rem;
+        margin-bottom: 0.5rem;
+        /* Decrease the margin at the bottom */
+        text-decoration: underline;
     }
 
     /* Adjust the font size of the social media links */
     .socialmedia a {
-        font-size: 1.5rem;
+        font-size: .5rem;
+        margin-top: 0;
+
         /* Smaller font size */
     }
 }
@@ -273,11 +333,11 @@ video {
 /* Update the .email class */
 .email {
     display: inline-block;
-    font-size: 1.1rem;
-    color: black;
+    font-size: .9rem;
+    color: #fff;
     /* Change the text color to black */
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-top: .5rem;
+
     /* Decrease the margin at the bottom */
     text-decoration: underline;
 }

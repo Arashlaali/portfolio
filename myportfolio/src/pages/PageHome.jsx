@@ -39,11 +39,15 @@ function PageHome() {
             <section className='greetings'>
 
                 <hr />
-                <h3>Let's Chat</h3>
-                <p className='contact_text'>
-                    Please feel free to contact me via LinkedIn or Email. I’m always looking forward to an insightful conversation over coffee!
-                    <span>☕</span>
-                </p>
+                <div className='contact_me'>
+
+                    <h3>Let's Chat</h3>
+                    <p className='contact_text'>
+                        Please feel free to contact me via LinkedIn or Email. I’m always looking forward to an insightful conversation over coffee!
+                        <span>☕</span>
+                    </p>
+
+                </div>
                 <div className='socialmedia'>
                     <a href="https://www.linkedin.com/in/arash-laali-03746b31/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
