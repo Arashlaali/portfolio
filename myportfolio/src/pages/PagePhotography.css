@@ -24,7 +24,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 4px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin-top: 1450px;
 }
 
@@ -35,13 +35,13 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
     overflow: hidden;
 }
 
 /* Hover effect for images */
 .image-inner:hover {
-    transform: scale(1.2);
+    transform: scale(1.25);
 }
 
 /* Styling for image tags */
