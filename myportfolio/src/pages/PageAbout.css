@@ -29,6 +29,9 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 600px;
+    position: relative;
+    z-index: 1;
 }
 
 /* For larger screens, adjust the grid layout to display two columns */
