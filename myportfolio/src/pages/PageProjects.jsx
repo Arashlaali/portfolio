@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import movieImage from '../images/movie.png';
 import shoppifyImage from '../images/shoppify.png';
 import wackaMoleImage from '../images/wackamole.jpg';
+import fotografieImage from '../images/fotografie.jpg';
 
 function PageProjects() {
 
@@ -17,6 +18,22 @@ function PageProjects() {
                 </div>
                 <div id='portfolio'>
                     <div className='projects-flex'>
+                        <div className='projects-individual'>
+                            <img className="project-image" src={fotografieImage} alt="Fotografie Arash Website" />
+                        </div>
+                        <div className='projects-bio'>
+                            <h2> Artist Portfolio</h2>
+                            <ul>
+                                <li>WordPress</li>
+                                <li>HTML</li>
+                                <li> CSS </li>
+                                <li> GitHub</li>
+                            </ul>
+                            <article className='project-bio'>
+                                Fotografie Arash is a portfolio website designed for an artist. It showcases their work and provides information about their photography services. The website is built using WordPress, HTML, and CSS, ensuring a professional and visually appealing presentation.
+
+                            </article>
+                        </div>
                         <div className='projects-individual'>
                             <img className="project-image" src={wackaMoleImage} alt="Wack A Mole Game" />
                         </div>
@@ -43,6 +60,10 @@ function PageProjects() {
                                 <li> SASS </li>
                                 <li> GitHub API</li>
                             </ul>
+                            <article className='project-bio'>
+                                Cinematic Wonders is a movie database application built with React JS. It allows users to search for movies, view details, and explore various genres. The app fetches data from the GitHub API, providing a seamless experience for movie enthusiasts.
+
+                            </article>
                         </div>
 
                     </div>
