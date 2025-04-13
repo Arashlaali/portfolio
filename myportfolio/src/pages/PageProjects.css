@@ -93,9 +93,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
+    width: 90%;
     text-align: center;
-    grid-column: 2 / 3;
+    grid-column: 1 / 3;
     /* Place projects-flex in the right column */
 }
 
@@ -127,7 +127,7 @@ body {
 
 /* Individual Project Style */
 .projects-individual img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     border-radius: 30px;
     margin-bottom: 2px;
@@ -154,8 +154,10 @@ body {
     font-family: 'Georgia', serif;
     font-size: 1rem;
     line-height: 1.5;
+    max-width: 60%;
+    margin: auto;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 
