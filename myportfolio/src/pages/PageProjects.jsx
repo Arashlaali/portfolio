@@ -49,9 +49,9 @@ function PageProjects() {
 
                             </article>
                         </div>
-                        <div className='projects-individual'>
+                        <a href="https://nazilashadpour.com/movie-mania" target="_blank" rel="noopener noreferrer">
                             <img className="project-image" src={movieImage} alt="moviedata base" />
-                        </div>
+                        </a>
                         <div className='projects-bio'>
                             <h2> Cinematic Wonders</h2>
                             <ul>
