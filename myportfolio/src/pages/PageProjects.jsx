@@ -49,7 +49,7 @@ function PageProjects() {
 
                             </article>
                         </div>
-                        <a href="https://nazilashadpour.com/movie-mania" target="_blank" rel="noopener noreferrer">
+                        <a href="https://arash-laali.com/cinematic-wonders" target="_blank" rel="noopener noreferrer">
                             <img className="project-image" src={movieImage} alt="moviedata base" />
                         </a>
                         <div className='projects-bio'>
