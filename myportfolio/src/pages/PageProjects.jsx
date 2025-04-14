@@ -35,7 +35,9 @@ function PageProjects() {
                             </article>
                         </div>
                         <div className='projects-individual'>
-                            <img className="project-image" src={wackaMoleImage} alt="Wack A Mole Game" />
+                            <a href=" https://arash-laali.com/wack-a-mole/" target="_blank" rel="noopener noreferrer">
+                                <img className="project-image" src={wackaMoleImage} alt="Wack a Mole Game" />
+                            </a>
                         </div>
                         <div className='projects-bio'>
                             <h2> Wack A Mole Game</h2>
@@ -49,9 +51,11 @@ function PageProjects() {
 
                             </article>
                         </div>
-                        <a href="https://arash-laali.com/cinematic-wonders" target="_blank" rel="noopener noreferrer">
-                            <img className="project-image" src={movieImage} alt="moviedata base" />
-                        </a>
+                        <div className='projects-individual'>
+                            <a href="https://arash-laali.com/cinematic-wonders" target="_blank" rel="noopener noreferrer">
+                                <img className="project-image" src={movieImage} alt="moviedata base" />
+                            </a>
+                        </div>
                         <div className='projects-bio'>
                             <h2> Cinematic Wonders</h2>
                             <ul>
