@@ -25,6 +25,7 @@ function PageProjects() {
                             <h2> Artist Portfolio</h2>
                             <ul>
                                 <li>WordPress</li>
+                                <li> PHP </li>
                                 <li>HTML</li>
                                 <li> CSS </li>
                                 <li> GitHub</li>
