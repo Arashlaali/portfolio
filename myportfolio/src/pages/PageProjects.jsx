@@ -31,7 +31,7 @@ function PageProjects() {
                                 <li> GitHub</li>
                             </ul>
                             <article className='projects-info'>
-                                Fotografie Arash is a portfolio website designed for an artist. It showcases their work and provides information about their photography services. The website is built using WordPress, HTML, and CSS, ensuring a professional and visually appealing presentation.
+                                Fotografie Arash is a portfolio website designed for an artist. It showcases his work and provides information about his photography services. The website is built using WordPress, PHP, HTML, and CSS, ensuring a professional and visually appealing presentation.
 
                             </article>
                         </div>
