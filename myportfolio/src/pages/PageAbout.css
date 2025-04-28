@@ -195,9 +195,28 @@ h4 {
     border-color: var(--primary-color);
 }
 
+.education {
 
-/* Responsive text sizes for smaller screens */
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
 @media (max-width: 767px) {
+    .about-me {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+        /* Reset any named areas */
+    }
+
+    .education {
+        grid-column: auto;
+        /* Reset column spanning */
+        max-width: 100%;
+        margin: 0;
+        /* Reset centering for full-width */
+    }
+
     .about-article h3 {
         font-size: 1.8rem;
     }
