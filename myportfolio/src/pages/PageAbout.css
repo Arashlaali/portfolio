@@ -39,29 +39,33 @@
     .about-me {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
         grid-template-areas:
-            "about-article work";
+            "about-article about-article"
+            "work work";
         gap: 2rem;
-        max-width: 80%;
+        max-width: 90%;
         margin: 0 auto;
     }
 
-    .work {
-        grid-area: work;
+    .me {
+        grid-column: span 2;
+        margin: 0 auto;
+        width: 70%;
     }
 
-    .about-article {
-        grid-area: about-article;
+    .work {
+        grid-column: 1/2;
     }
+
+
 }
 
 /* Styling the about-article sections */
 .about-article {
     background-color: var(--background-color);
-    padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -143,11 +147,10 @@ h4 {
 /* UL Styling */
 .about ul {
     list-style: none;
-    /* Remove default bullets */
     margin-left: 1rem;
     padding-left: 1rem;
     border-left: 1px solid var(--primary-color);
-    /* Add a visual line */
+
 }
 
 /* LI Styling */
@@ -195,12 +198,7 @@ h4 {
     border-color: var(--primary-color);
 }
 
-.education {
 
-    grid-column: span 2;
-    max-width: 50%;
-    margin: 0 auto;
-}
 
 @media (max-width: 767px) {
     .about-me {
@@ -211,10 +209,14 @@ h4 {
 
     .education {
         grid-column: auto;
-        /* Reset column spanning */
         max-width: 100%;
         margin: 0;
-        /* Reset centering for full-width */
+
+    }
+
+    .me {
+
+        margin-top: 45rem;
     }
 
     .about-article h3 {
