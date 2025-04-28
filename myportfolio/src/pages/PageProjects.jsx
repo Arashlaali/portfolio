@@ -57,7 +57,7 @@ function PageProjects() {
                                 <img className="project-image" src={movieImage} alt="moviedata base" />
                             </a>
                         </div>
-                        <div className='projects-bio'>
+                        <div className='projects-bio last-project'>
                             <h2> Cinematic Wonders</h2>
                             <ul>
                                 <li> React JS</li>

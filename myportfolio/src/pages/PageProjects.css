@@ -150,6 +150,37 @@ body {
     margin-bottom: 50px;
 }
 
+
+/* Horizontal line below article */
+.projects-bio article::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    /* Width of the line */
+    height: 1px;
+    background-color: #fff;
+    /* Color of the line */
+    margin-top: 20px;
+}
+
+
+
+/* Padding for spacing */
+.projects-bio article {
+    position: relative;
+    padding-bottom: 20px;
+    /* Space for the line */
+}
+
+/* Remove the line from the last article */
+.projects-bio.last-project article::after {
+    content: none;
+}
+
+
 /* Responsive Design for tablets and phones */
 @media (max-width: 768px) {
     #container {
