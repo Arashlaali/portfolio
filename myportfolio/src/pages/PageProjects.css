@@ -133,6 +133,8 @@ body {
     margin-top: 10px;
 }
 
+
+
 .projects-bio h2 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -174,6 +176,7 @@ body {
     padding-bottom: 20px;
     /* Space for the line */
 }
+
 
 /* Remove the line from the last article */
 .projects-bio.last-project article::after {

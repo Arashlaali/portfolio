@@ -21,7 +21,7 @@ function PageProjects() {
                         <div className='projects-individual'>
                             <img className="project-image" src={fotografieImage} alt="Fotografie Arash Website" />
                         </div>
-                        <div className='projects-bio'>
+                        <div className='projects-bio first-project'>
                             <h2> Artist Portfolio</h2>
                             <ul>
                                 <li>WordPress</li>
