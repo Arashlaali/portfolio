@@ -13,18 +13,16 @@ function PageAbout() {
                         <article className='about-article'>
                             <h3>About me </h3>
                             <div>
-                                <p className='about-intro'> My name is Arash ,I am a qualified and professional web
-                                    developer recently graduated from
-                                    BCIT in Front-End Web Development
-                                    program. Currently working as Fashion photographer, with strong creative and
-                                    analytical skills, and with 7 years of
-                                    mechanical engineering work
-                                    experience, Team player with an eye for
-                                    detail.</p>
+                                <p className='about-intro'> Hi, I’m Arash — a Front-End Web Developer with a Creative Edge.
+                                    <br></br>
+
+                                    I'm a qualified and passionate web developer, recently graduated from the Front-End Web Development program at BCIT. With a unique blend of technical precision from 7 years in mechanical engineering and creative vision as a fashion photographer, I bring both analytical thinking and artistic flair to every project. I'm a detail-oriented team player who thrives on building clean, responsive, and visually compelling digital experiences.</p>
                             </div>
                             <div className='freetime'>
                                 <h4> Being creative in my free time</h4>
-                                <p className='freetime-intro'>In my free time I spend tons of times exploring arts, attending photography workshops, backcountry camping, travelling to explore historical artistic landscapes and etc.</p>
+                                <p className='freetime-intro'>Beyond the Code.
+                                    <br></br>
+                                    In my free time, I dive deep into the world of art — exploring galleries, attending photography workshops, and capturing stories through the lens. I’m also passionate about backcountry camping and traveling to discover historic and artistic landscapes around the world. These experiences fuel my creativity and inspire the design work I bring to the web.</p>
                             </div>
 
                         </article>
