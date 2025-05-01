@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
 
 function Footer() {
     const [isFooterOpen, setIsFooterOpen] = useState(false); // State to toggle the footer menu
@@ -22,16 +21,16 @@ function Footer() {
             {/* Footer Links */}
             <ul className={`footer-ul ${isFooterOpen ? 'active' : ''}`}>
                 <li>
-                    <Link to="/contact">CONTACT</Link>
+                    <a href="mailto:arash.laali@gmail.com">Contact</a>
                 </li>
                 <li>
-                    <Link to="/privacy">PRIVACY POLICY</Link>
-                </li>
-                <li>
-                    <Link to="/terms">TERMS OF SERVICE</Link>
-                </li>
-                <li>
-                    <Link to="/socials">SOCIAL MEDIA</Link>
+                    <a
+                        href="https://www.linkedin.com/in/arash-laali-03746b31/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
                 </li>
             </ul>
         </footer>
