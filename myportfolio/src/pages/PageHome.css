@@ -4,69 +4,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+
 }
 
 body {
-    background-color: #f7f7f7;
-    color: #333;
-    font-size: 16px;
+    background-color: #000000;
+    color: #ffffff;
     line-height: 1.6;
     min-height: 100vh;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-h1,
-h2,
-h3 {
-    font-weight: 500;
-}
-
-/* Navbar Styles */
-.navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem 3rem;
-    background-color: #000;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-.navbar h2 {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.navbar-ul {
-    display: flex;
-}
-
-.navbar-ul li {
-    margin: 0 1rem;
-}
-
-.navbar-ul li a {
-    color: #fff;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar-ul li a:hover {
-    color: #f39c12;
+    position: relative;
 }
 
 /* Hero Section Styles */
@@ -76,104 +25,318 @@ h3 {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    /* Ensure it takes full viewport height */
+    width: 100%;
+    position: relative;
     text-align: center;
-    padding-top: 5rem;
-    /* To push content below the navbar */
 }
 
-#home img {
-    width: 300px;
+/* Greeting Box */
+.greeting_box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Make greeting_message relative to the video */
+.greeting_message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Portrait Image */
+#home img.portrait {
+    width: 250px;
     height: 250px;
-    border-radius: 30%;
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
     border: 2px solid #f39c12;
 }
 
-.self-bio {
-    margin-top: 2rem;
-}
-
-.self-bio h1 {
+/* Greeting Text */
+.greeting_name h1 {
     font-size: 3rem;
-    color: #333;
-    margin-bottom: 1rem;
+    color: #ffffff;
+    margin-bottom: 0;
+    padding: 0;
 }
 
-.self-bio p {
-    font-size: 1.5rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Contact Section Styles */
-.contact {
-    background-color: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.contact h2 {
+.greeting_name h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+    color: rgb(222, 72, 72);
+    margin-top: 1rem;
+    margin-left: 300px;
+    padding-top: 0;
 }
 
-.contact p {
-    font-size: 1.3rem;
-    color: #666;
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    font-size: 1.2rem;
+    color: #ffffff;
+    position: relative;
+    top: 0;
+    margin-left: 300px;
+    text-align: center;
+    transform: none;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Background Video */
+.bg-video {
+    width: 100vw;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+/* Greetings Box Styling */
+.greetings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+    max-width: 800px;
+    /* Limit the width */
+    background-color: #000000;
+    /* Background for the box */
+    border-radius: 10px;
+
+    /* Rounded corners */
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    /* Space around the greetings box */
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
-.contact span {
+.greetings a {
+    margin: .5rem;
+
+    /* Add gap between anchor links (social media and email links) */
+}
+
+. .socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    /* Space between social media icons */
+}
+
+.greetings:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the box when hovering */
+    box-shadow: 0 8px 12px rgba(178, 181, 180, 0.8);
+    /* Add more prominent shadow on hover */
+}
+
+.contact_me h3 {
     font-size: 2rem;
+    color: rgb(222, 72, 72);
+    margin-top: 0;
+    /* Space above the greeting text */
+    margin-bottom: 1rem;
+    /* Space below the greeting text */
 }
 
-.socialmedia {
-    margin-top: 2rem;
+.contact_me p {
+
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    /* Space above the contact text */
 }
 
-.socialmedia a {
-    font-size: 2rem;
-    color: #333;
-    margin: 0 1rem;
-    transition: color 0.3s ease;
+.greetings hr {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(222, 72, 72);
+    border: none;
+    margin: 0 0 1rem 0;
+    /* Space below the line */
 }
 
-.socialmedia a:hover {
-    color: #f39c12;
+*/ .contact_text {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 0;
+    /* Space above the contact text */
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .navbar h2 {
-        font-size: 1.5rem;
+@media (max-width: 875px) {
+    #home {
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
     }
 
-    .navbar-ul li {
-        margin: 0 0.8rem;
+    .greeting_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        width: 100%;
+        height: 100%;
     }
 
-    .self-bio h1 {
-        font-size: 2.5rem;
+
+
+    /* Adjust Greeting Message on small screens */
+    .greeting_message {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Keep it centered */
     }
 
-    .self-bio p {
-        font-size: 1.2rem;
-        max-width: 90%;
-    }
-
-    #home img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .contact h2 {
+    .greeting_name h1 {
         font-size: 2rem;
     }
 
-    .contact p {
-        font-size: 1.1rem;
+    .greeting_name h2 {
+        font-size: 1.5rem;
     }
+
+    .fade-in {
+        font-size: .75rem;
+        opacity: 1;
+        /* left: 50%; */
+        transform: translateX(-50%);
+        position: relative;
+        top: 0;
+        margin-left: 300px;
+        text-align: center;
+        transform: none;
+    }
+
+    /* Adjust .greetings height to 20% of the screen height on small screens */
+    .greetings {
+        height: 20vh;
+        /* Set the height to 20% of the viewport height */
+        padding: 0;
+        /* Adjust padding to make it look good in a smaller box */
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .greetings a {
+        margin-top: 0;
+        ;
+        margin: 0.5rem;
+        /* Reduced gap between anchor links on small screens */
+    }
+
+    .greetings h3 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        /* Adjust the font size of the greeting text */
+    }
+
+    /* Adjust the contact text font size on small screens */
+    .contact_text {
+        font-size: 0.8rem;
+        color: #333;
+
+
+        /* Smaller font size */
+    }
+
+    .contact_me h3 {
+        font-size: 1.5rem;
+        margin-top: 0;
+        /* Space above the greeting text */
+        margin-bottom: 0;
+        /* Space below the greeting text */
+    }
+
+    .contact_me p {
+        font-size: .8rem;
+        margin-top: 0;
+        /* Space above the greeting text */
+        margin-bottom: .2rem;
+        /* Space below the greeting text */
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        /* Space between social media icons */
+    }
+
+    .email {
+        font-size: 0.8rem;
+        color: #fff;
+        /* Change the text color to black */
+        padding-bottom: 2rem;
+        margin-bottom: 0.5rem;
+        /* Decrease the margin at the bottom */
+        text-decoration: underline;
+    }
+
+    /* Adjust the font size of the social media links */
+    .socialmedia a {
+        font-size: .5rem;
+        margin-top: 0;
+
+        /* Smaller font size */
+    }
+}
+
+/* Update the .email class */
+.email {
+    display: inline-block;
+    font-size: .9rem;
+    color: #fff;
+    /* Change the text color to black */
+    margin-top: .5rem;
+
+    /* Decrease the margin at the bottom */
+    text-decoration: underline;
 }

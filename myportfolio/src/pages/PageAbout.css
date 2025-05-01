@@ -5,16 +5,33 @@
     box-sizing: border-box;
 }
 
-/* Set up the grid for the about-me section */
+
+
+/* Color palette */
+:root {
+    --primary-color: #e05409;
+    --secondary-color: #ffffff;
+    --accent-color: #74b2db;
+
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --text-light: #c6c5c5;
+    --text-muted: #c2bdbd;
+}
+
+
+
+
 .about-me {
     display: grid;
     grid-template-columns: 1fr;
-    /* Single column layout */
     gap: 1rem;
-    /* Space between sections */
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 600px;
+    position: relative;
+    z-index: 1;
 }
 
 /* For larger screens, adjust the grid layout to display two columns */
@@ -22,42 +39,46 @@
     .about-me {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        /* Two columns layout */
         grid-template-areas:
-            "about-article work";
-        /* Display work-education div before the about-article */
+            "about-article about-article"
+            "work work";
         gap: 2rem;
-        /* Add gap between divs */
-        max-width: 80%;
-        /* Make the grid take 80% of the screen width */
+        max-width: 90%;
         margin: 0 auto;
-        /* Center the grid horizontally */
+    }
+
+    .me {
+        grid-column: span 2;
+        margin: 0 auto;
+        width: 70%;
     }
 
     .work {
-        grid-area: work;
+        grid-column: 1/2;
     }
 
 
-    .about-article {
-        grid-area: about-article;
-    }
 }
 
 /* Styling the about-article sections */
 .about-article {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* About heading styling */
 .about-article h3 {
     font-family: 'Arial', sans-serif;
-    font-size: 2rem;
-    color: #333;
+    font-size: 2.2rem;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -66,7 +87,7 @@
     font-family: 'Georgia', serif;
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #555;
+    color: var(--text-light);
     margin-bottom: 1.5rem;
 }
 
@@ -74,7 +95,7 @@
 .freetime h3 {
     font-family: 'Arial', sans-serif;
     font-size: 1.8rem;
-    color: #333;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -82,23 +103,28 @@
     font-family: 'Georgia', serif;
     font-size: 1.1rem;
     line-height: 1.5;
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 1.5rem;
 }
 
 /* Work section styling */
-.work {
-    background-color: #f9f9f9;
+.me,
+.work,
+.education {
+    background-color: var(--background-color);
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.education {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Hover effect for the .me, .work, and .education sections */
+.me:hover,
+.work:hover,
+.education:hover {
+    transform: translateY(-10px);
+    background-color: var(--secondary-color);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Work heading */
@@ -106,7 +132,7 @@ h3 {
     text-align: center;
     font-family: 'Arial', sans-serif;
     font-size: 2rem;
-    color: #333;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -114,19 +140,94 @@ h3 {
 h4 {
     font-family: 'Arial', sans-serif;
     font-size: 1.2rem;
-    color: #333;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
-/* List item styling */
-ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
+/* UL Styling */
+.about ul {
+    list-style: none;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid var(--primary-color);
+
 }
 
-ul li {
+/* LI Styling */
+.about ul li {
+    position: relative;
     font-family: 'Georgia', serif;
     font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.about ul li::before {
+    content: "★";
+    /* Custom bullet (can be emoji or icon font) */
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.about ul li:hover {
+    transform: translateX(10px);
+    color: var(--text-color);
+}
+
+.about ul li:hover::before {
+    transform: scale(1.3) rotate(10deg);
+}
+
+/* A Styling */
+.about a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about a:hover {
+    color: var(--primary-color);
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+}
+
+
+
+@media (max-width: 767px) {
+    .about-me {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+        /* Reset any named areas */
+    }
+
+    .education {
+        grid-column: auto;
+        max-width: 100%;
+        margin: 0;
+
+    }
+
+    .me {
+
+        margin-top: 45rem;
+    }
+
+    .about-article h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-intro {
+        font-size: 1rem;
+    }
+
+    .freetime h3 {
+        font-size: 1.5rem;
+    }
 }

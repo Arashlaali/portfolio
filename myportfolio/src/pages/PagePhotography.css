@@ -1,0 +1,100 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+/* Main container styling */
+#photography {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2px;
+    padding-top: 60px;
+    background-color: #f5f5f5;
+    height: auto;
+    min-height: auto;
+    overflow-y: auto;
+}
+
+/* Image container */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 1450px;
+}
+
+/* Individual container for images and titles */
+.image-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Hover effect for images */
+.image-inner:hover {
+    transform: scale(1.2);
+}
+
+/* Styling for image tags */
+.image-inner img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Title styling */
+.image-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    color: white;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show title on hover */
+.image-inner:hover .image-title {
+    opacity: 1;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .image-container {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns for smaller screens */
+    }
+
+    .image-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        grid-template-columns: 1fr;
+
+    }
+
+    .image-title {
+        font-size: 14px;
+    }
+}
