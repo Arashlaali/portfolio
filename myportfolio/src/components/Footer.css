@@ -1,0 +1,99 @@
+/* Footer styles */
+.footer {
+    background-color: black;
+    padding: 20px 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 10px solid white;
+}
+
+.footer h2 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    margin-left: 70px;
+}
+
+/* Footer navigation list */
+.footer-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Footer list items */
+.footer li {
+    margin-left: 60px;
+}
+
+/* Footer links */
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    color: #ff6347;
+}
+
+/* Footer toggle icon (similar to hamburger) */
+.footer-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.footer-toggle .line {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .footer-ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: black;
+        position: absolute;
+        bottom: 60px;
+        /* Adjust based on footer height */
+        left: 0;
+        padding: 20px;
+        border-top: 10px solid white;
+    }
+
+    .footer-ul.active {
+        display: flex;
+    }
+
+    .footer li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .footer-toggle {
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .footer h2 {
+        margin-left: 10px;
+    }
+}
