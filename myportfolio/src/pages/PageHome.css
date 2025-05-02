@@ -25,7 +25,6 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    /* Ensure it takes full viewport height */
     width: 100%;
     position: relative;
     text-align: center;
@@ -200,7 +199,6 @@ video {
     font-size: 1rem;
     color: #fff;
     margin-top: 0;
-    /* Space above the contact text */
 }
 
 /* Responsive Design */
@@ -256,9 +254,7 @@ video {
     /* Adjust .greetings height to 20% of the screen height on small screens */
     .greetings {
         height: 20vh;
-        /* Set the height to 20% of the viewport height */
         padding: 0;
-        /* Adjust padding to make it look good in a smaller box */
         background-color: transparent;
         box-shadow: none;
     }
@@ -313,10 +309,8 @@ video {
     .email {
         font-size: 0.8rem;
         color: #fff;
-        /* Change the text color to black */
         padding-bottom: 2rem;
         margin-bottom: 0.5rem;
-        /* Decrease the margin at the bottom */
         text-decoration: underline;
     }
 
@@ -325,7 +319,7 @@ video {
         font-size: .5rem;
         margin-top: 0;
 
-        /* Smaller font size */
+
     }
 }
 
@@ -334,9 +328,6 @@ video {
     display: inline-block;
     font-size: .9rem;
     color: #fff;
-    /* Change the text color to black */
     margin-top: .5rem;
-
-    /* Decrease the margin at the bottom */
     text-decoration: underline;
 }

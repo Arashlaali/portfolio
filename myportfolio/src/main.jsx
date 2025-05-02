@@ -7,6 +7,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+
     <AppRouter />
   </StrictMode>,
 )

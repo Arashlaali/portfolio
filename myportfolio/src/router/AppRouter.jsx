@@ -13,18 +13,16 @@ import PagePhotography from '../pages/PagePhotography';
 
 function AppRouter() {
     return (
+
         <Router>
             <Navbar /> {/* Use Router to enable routing */}
             <Routes>
-                {/* Define routes and associate with components */}
-                <Route path="/" element={<PageHome />} /> {/* Home page route */}
+                <Route path="/" element={<PageHome />} />
                 <Route path="/about" element={<PageAbout />} />
                 <Route path="/projects" element={<PageProjects />} />
                 <Route path="/photography" element={<PagePhotography />} />
             </Routes>
             <Footer />
-            {/* Footer component */}
-            {/* Add more routes as needed */}
 
         </Router>
     );

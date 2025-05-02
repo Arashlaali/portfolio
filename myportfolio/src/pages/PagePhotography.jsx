@@ -26,7 +26,7 @@ function PagePhotography() {
 
     return (
         <main id="photography">
-            <Navbar /> {/* Assuming you have a Navbar component */}
+            <Navbar />
             <div className='image-container'>
                 {images.length > 0 ? (
                     images.map((image, index) => (

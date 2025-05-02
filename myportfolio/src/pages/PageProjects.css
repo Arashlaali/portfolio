@@ -20,6 +20,7 @@ body {
     width: 100%;
     background-color: black;
     gap: 20px;
+    padding-top: 125rem;
 }
 
 /* Portfolio Section */
@@ -149,6 +150,7 @@ body {
     max-width: 60%;
     margin: auto;
     color: #fff;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
@@ -161,10 +163,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    /* Width of the line */
     height: 1px;
     background-color: #fff;
-    /* Color of the line */
     margin-top: 20px;
 }
 
@@ -189,6 +189,7 @@ body {
     #container {
         flex-direction: column;
         padding: 10px;
+        padding-top: 115rem;
     }
 
     #portfolio {

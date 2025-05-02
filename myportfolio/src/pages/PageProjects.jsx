@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import './PageProjects.css';  // Import your custom CSS for styling
 import Navbar from '../components/Navbar';
 import movieImage from '../images/movie.png';
-import shoppifyImage from '../images/shoppify.png';
 import wackaMoleImage from '../images/wackamole.jpg';
 import fotografieImage from '../images/fotografie.jpg';
 
@@ -19,7 +18,9 @@ function PageProjects() {
                 <div id='portfolio'>
                     <div className='projects-flex'>
                         <div className='projects-individual'>
-                            <img className="project-image" src={fotografieImage} alt="Fotografie Arash Website" />
+                            <a href="https://fotografiearash.bcitwebdeveloper.ca/" target='_blank' rel='noopener noreferrer'>
+                                <img className="project-image" src={fotografieImage} alt="Fotografie Arash Website" />
+                            </a>
                         </div>
                         <div className='projects-bio first-project'>
                             <h2> Artist Portfolio</h2>

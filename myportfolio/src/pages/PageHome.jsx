@@ -3,12 +3,11 @@ import './PageHome.css';  // Import your custom CSS for styling
 import Navbar from '../components/Navbar';
 import portraitImage from '../images/myportrait.jpg'; // Import your portrait image
 import videoBg from '../assets/bg-movie.mp4'; // Import your video background
+import { Helmet } from 'react-helmet';
 
 
 
 function PageHome() {
-
-
 
     useEffect(() => {
         const canvas = document.querySelector('.vanta-canvas');
@@ -17,7 +16,10 @@ function PageHome() {
 
 
     return (
+
         <main id="home">
+            <title>Home | Portfolio</title>
+            <meta name="description" content="Welcome to my portfolio" />
             <div className='bg-video'>
                 <div className='overlay'></div>
                 <video src={videoBg} autoPlay loop muted />
@@ -64,6 +66,7 @@ function PageHome() {
                 <a className="email" href="mailto:arash.laali@gmail.com">arash.laali@gmail.com</a>
             </section>
         </main>
+
     );
 }
 
