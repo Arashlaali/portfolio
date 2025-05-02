@@ -4,8 +4,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Im
 import PageHome from '../pages/PageHome'; // Import the PageHome component
 import Navbar from '../components/Navbar';
 import PageAbout from '../pages/PageAbout'; // Import the PageAbout component
+
+import Footer from '../components/Footer';
+
 import PageProjects from '../pages/PageProjects';
 import PagePhotography from '../pages/PagePhotography';
+
 
 function AppRouter() {
     return (
@@ -18,6 +22,10 @@ function AppRouter() {
                 <Route path="/projects" element={<PageProjects />} />
                 <Route path="/photography" element={<PagePhotography />} />
             </Routes>
+            <Footer />
+            {/* Footer component */}
+            {/* Add more routes as needed */}
+
         </Router>
     );
 }

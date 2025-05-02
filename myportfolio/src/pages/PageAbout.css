@@ -199,6 +199,11 @@ h4 {
 }
 
 
+.about {
+
+    margin-top: 10rem;
+}
+
 
 @media (max-width: 767px) {
     .about-me {
@@ -216,7 +221,7 @@ h4 {
 
     .me {
 
-        margin-top: 45rem;
+        margin-top: 30rem;
     }
 
     .about-article h3 {
@@ -226,6 +231,8 @@ h4 {
     .about-intro {
         font-size: 1rem;
     }
+
+
 
     .freetime h3 {
         font-size: 1.5rem;

@@ -1,0 +1,55 @@
+.footer {
+    background-color: black;
+    padding: 20px 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid white;
+    color: white;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Use margin for spacing */
+.footer-left {
+    justify-content: flex-start;
+    margin-right: 20px;
+}
+
+.footer-center {
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.footer-right {
+    justify-content: flex-end;
+    margin-left: 20px;
+}
+
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    color: #ff6347;
+}
+
+.footer h2 {
+    margin: 0;
+    font-size: 20px;
+}
