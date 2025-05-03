@@ -10,6 +10,8 @@ function PageProjects() {
 
     return (
         <main id="projects">
+            <title>Projects | Portfolio</title>
+            <meta name="description" content="My projects" />
             <div id='container'>
                 <div className='projects-title'>
                     <p> Featured</p>

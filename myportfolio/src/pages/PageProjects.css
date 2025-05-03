@@ -7,6 +7,8 @@
 
 html,
 body {
+    margin: 0;
+    padding: 0;
     width: 100%;
     overflow-x: hidden;
 }
@@ -20,7 +22,7 @@ body {
     width: 100%;
     background-color: black;
     gap: 20px;
-    padding-top: 125rem;
+    padding-top: 130rem;
 }
 
 /* Portfolio Section */
@@ -32,6 +34,8 @@ body {
     max-width: 1400px;
     padding: 20px;
 }
+
+
 
 /* Featured Projects title */
 .projects-title {

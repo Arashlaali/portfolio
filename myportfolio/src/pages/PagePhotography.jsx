@@ -26,6 +26,8 @@ function PagePhotography() {
 
     return (
         <main id="photography">
+            <title>Photography | Portfolio</title>
+            <meta name="description" content="Sample of my photography" />
             <Navbar />
             <div className='image-container'>
                 {images.length > 0 ? (
