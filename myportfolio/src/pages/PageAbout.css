@@ -207,7 +207,7 @@ h4 {
     .about-me {
         grid-template-columns: 1fr;
         grid-template-areas: none;
-        /* Reset any named areas */
+        margin-top: 60rem;
     }
 
     .education {
