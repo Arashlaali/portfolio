@@ -14,10 +14,11 @@ function PageProjects() {
             <meta name="description" content="My projects" />
             <div id='container'>
                 <div className='projects-title'>
-                    <p> Featured</p>
-                    <p> Projects</p>
+                    <p></p>
+                    <p> Featured <br />Projects</p>
                 </div>
                 <div id='portfolio'>
+
                     <div className='projects-flex'>
                         <div className='projects-individual'>
                             <a href="https://fotografiearash.bcitwebdeveloper.ca/" target='_blank' rel='noopener noreferrer'>

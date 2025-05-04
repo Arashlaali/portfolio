@@ -59,7 +59,7 @@ body {
 .projects-title p {
     font-size: 3rem;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 25px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
     background: linear-gradient(45deg, #ffffff, #7873f5);
