@@ -153,7 +153,7 @@ video {
     /* Add gap between anchor links (social media and email links) */
 }
 
-. .socialmedia {
+.socialmedia {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,13 +306,7 @@ video {
         /* Space between social media icons */
     }
 
-    .email {
-        font-size: 0.8rem;
-        color: #fff;
-        padding-bottom: 2rem;
-        margin-bottom: 0.5rem;
-        text-decoration: underline;
-    }
+
 
     /* Adjust the font size of the social media links */
     .socialmedia a {
@@ -321,13 +315,4 @@ video {
 
 
     }
-}
-
-/* Update the .email class */
-.email {
-    display: inline-block;
-    font-size: .9rem;
-    color: #fff;
-    margin-top: .5rem;
-    text-decoration: underline;
 }
