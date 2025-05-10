@@ -32,6 +32,51 @@ function PageHome() {
                     </div>
                 </div>
             </div>
+            {/* Skills Section */}
+            <section className='skills'>
+                <h2>Skills</h2>
+                <div className='skills-container'>
+                    {/* Core Technical Skills */}
+                    <div className='skill-category'>
+                        <h3>Core Technical Skills</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+
+                    {/* Framework and Libraries */}
+                    <div className='skill-category'>
+                        <h3>Framework & Libraries</h3>
+                        <ul>
+                            <li>React.js</li>
+                            <li>jQuery</li>
+                        </ul>
+                    </div>
+
+                    {/* Design & UX/UI Skills */}
+                    <div className='skill-category'>
+                        <h3>Design & UX/UI Skills</h3>
+                        <ul>
+                            <li>Responsive Design</li>
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                        </ul>
+                    </div>
+
+                    {/* Build Tools and Version Controls */}
+                    <div className='skill-category'>
+                        <h3>Build Tools & Version Control</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Vite</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
 
             <section className='greetings'>
                 <div className='contact_me'>
