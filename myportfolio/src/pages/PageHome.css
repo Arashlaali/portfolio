@@ -153,14 +153,7 @@ video {
     /* Add gap between anchor links (social media and email links) */
 }
 
-.socialmedia {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    /* Space between social media icons */
-}
+
 
 .greetings:hover {
     transform: scale(1.05);
@@ -169,13 +162,62 @@ video {
     /* Add more prominent shadow on hover */
 }
 
+.contact_me {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
 .contact_me h3 {
     font-size: 2rem;
     color: rgb(222, 72, 72);
-    margin-top: 0;
-    /* Space above the greeting text */
-    margin-bottom: 1rem;
-    /* Space below the greeting text */
+    margin: 0;
+}
+
+.contact_me .vertical-line {
+    width: 1px;
+    background-color: rgb(222, 72, 72);
+    /* Red color for the line */
+    height: 100%;
+    /* Full height */
+    margin: 0 2rem;
+    /* Adds spacing around the vertical line */
+}
+
+.contact_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.contact_text {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.socialmedia a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.socialmedia a:hover {
+    color: rgb(222, 72, 72);
 }
 
 .contact_me p {
@@ -195,11 +237,6 @@ video {
     /* Space below the line */
 }
 
-*/ .contact_text {
-    font-size: 1rem;
-    color: #fff;
-    margin-top: 0;
-}
 
 /* Responsive Design */
 @media (max-width: 875px) {
