@@ -51,6 +51,7 @@ function PageHome() {
                         <h3>Framework & Libraries</h3>
                         <ul>
                             <li>React.js</li>
+                            <li>Vue.js</li>
                             <li>jQuery</li>
                         </ul>
                     </div>

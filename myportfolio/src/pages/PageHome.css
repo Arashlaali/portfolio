@@ -230,7 +230,6 @@ video {
 
 .skills {
     padding: 2rem;
-    background-color: #f4f4f4;
     margin-top: 3rem;
     text-align: center;
 }
@@ -238,7 +237,8 @@ video {
 .skills h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: rgb(222, 72, 72);
+    ;
 }
 
 .skills-container {
@@ -252,14 +252,41 @@ video {
     background-color: white;
     border-radius: 8px;
     padding: 1rem;
-    width: 250px;
+    width: 270px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+    cursor: pointer;
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
 }
 
 .skill-category h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 0.8rem;
     color: #555;
+    position: relative;
+    /* Position relative for the line */
+}
+
+.skill-category h3::after {
+    content: '';
+    /* Creates the pseudo-element for the line */
+    position: absolute;
+    bottom: -5px;
+    /* Places the line just below the text */
+    left: 0;
+    width: 100%;
+    /* Makes the line span the width of the header */
+    height: 1px;
+    /* Sets the thickness of the line */
+    background-color: #333;
+    /* Line color */
 }
 
 .skill-category ul {
@@ -272,7 +299,6 @@ video {
     margin-bottom: 0.5rem;
     color: #777;
 }
-
 
 
 /* Responsive Design */
