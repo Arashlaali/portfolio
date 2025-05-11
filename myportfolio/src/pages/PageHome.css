@@ -228,6 +228,8 @@ video {
     /* Space above the contact text */
 }
 
+/*  skill section */
+
 .skills {
     padding: 2rem;
     margin-top: 3rem;
@@ -249,7 +251,7 @@ video {
 }
 
 .skill-category {
-    background-color: white;
+    background-color: rgb(47, 45, 45);
     border-radius: 8px;
     padding: 1rem;
     width: 270px;
@@ -262,14 +264,15 @@ video {
 .skill-category:hover {
     transform: translateY(-10px);
     /* Lift the card on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 4px 4px 4px rgb(222, 72, 72);
     /* Stronger shadow on hover */
 }
 
 .skill-category h3 {
     font-size: 1rem;
     margin-bottom: 0.8rem;
-    color: #555;
+    color: rgb(222, 72, 72);
     position: relative;
     /* Position relative for the line */
 }
@@ -285,7 +288,7 @@ video {
     /* Makes the line span the width of the header */
     height: 1px;
     /* Sets the thickness of the line */
-    background-color: #333;
+    background-color: rgb(222, 72, 72);
     /* Line color */
 }
 
@@ -297,7 +300,7 @@ video {
 
 .skill-category li {
     margin-bottom: 0.5rem;
-    color: #777;
+    color: #fff;
 }
 
 
