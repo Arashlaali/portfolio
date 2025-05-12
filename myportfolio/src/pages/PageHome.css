@@ -203,7 +203,7 @@ video {
     /* Red color for the line */
     height: 100%;
     /* Full height */
-    margin: 0 2rem;
+    margin: -1rem 2rem;
     /* Adds spacing around the vertical line */
 }
 

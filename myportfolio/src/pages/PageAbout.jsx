@@ -41,29 +41,38 @@ function PageAbout() {
                                     <h3>Work Experience</h3>
 
                                     <div>
-                                        <h4>Self-Employed</h4>
+                                        <h4>Photographer </h4>
+                                        <h5>Self-Employed (March 2021- Present)</h5>
                                         <ul>
-                                            <li>
-                                                Photographer: Performing E-commerce, Fashion, Lifestyle, Wedding, and Portrait photography sessions for clients across Canada, the United States, and Europe.
-                                            </li>
+                                            <li>Performing E-commerce, Fashion, Lifestyle, Wedding, and Portrait photography sessions for clients across Canada, the United States, and Europe.</li>
+                                            <li>Collaborating closely with models, designers, stylists, and
+                                                creative directors to produce high-quality visual content
+                                                tailored to brand aesthetics and client goals.</li>
+
                                         </ul>
                                     </div>
 
                                     <div>
-                                        <h4>Olympic Controls</h4>
+                                        <h4>Sales Engineer</h4>
+                                        <h5> Olympic Controls (March 2020 - April 2022) </h5>
                                         <ul>
                                             <li>
-                                                Sales Engineer: Designing mechanical control systems for large residential/commercial projects in the Vancouver area.
+                                                Designed mechanical control systems for large residential/commercial projects in the Vancouver area.
                                             </li>
+                                            <li>Prepared proposals, quotations and Bill of Materials.</li>
+                                            <li>Performed weekly follow-up meetings with customers .</li>
                                         </ul>
                                     </div>
 
                                     <div>
-                                        <h4>M & G Duravent</h4>
+                                        <h4> HVAC Engineer</h4>
+                                        <h5>M & G Duravent (September 2016 - March 2020)</h5>
                                         <ul>
                                             <li>
-                                                HVAC Engineer: Preparing quotes and system design for HVAC & plumbing systems for commercial, industrial, and residential projects in the United States.
+                                                Developed quotes and system design for HVAC & plumbing systems for commercial,and residential projects in the United States.
                                             </li>
+                                            <li>Supervised manufacturing process of the designed parts in manufacturing facility at Montreal Quebec.</li>
+
                                         </ul>
                                     </div>
                                 </article>
@@ -76,22 +85,25 @@ function PageAbout() {
 
                                     <div>
                                         <h4>BCIT (British Columbia Institute of Technology)</h4>
+                                        <h5> October 2024- May 2025</h5>
                                         <ul>
-                                            <li>Front-End Web Development Certificate (Oct 2024 – May 2025)</li>
+                                            <li>Front-End Web Development Certificate </li>
                                         </ul>
                                     </div>
 
                                     <div>
                                         <h4>Herzing College</h4>
+                                        <h5>September 2011 – May 2013</h5>
                                         <ul>
-                                            <li>CAD Design Diploma (Sept 2011 – May 2013)</li>
+                                            <li>Computer Aided Design (CAD) Diploma </li>
                                         </ul>
                                     </div>
 
                                     <div>
                                         <h4>Aachen University of Applied Sciences</h4>
+                                        <h5>September 2004 – December 2008</h5>
                                         <ul>
-                                            <li>Bachelor of Mechanical Engineering (Sept 2004 – Dec 2008)</li>
+                                            <li>Bachelor of Applied Science - Mechanical Engineering </li>
                                         </ul>
                                     </div>
                                 </article>
