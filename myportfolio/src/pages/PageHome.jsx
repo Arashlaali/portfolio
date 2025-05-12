@@ -40,9 +40,9 @@ function PageHome() {
                     <div className='skill-category'>
                         <h3>Core Technical Skills</h3>
                         <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript ES6</li>
                         </ul>
                     </div>
 

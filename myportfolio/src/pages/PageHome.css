@@ -30,6 +30,18 @@ body {
     text-align: center;
 }
 
+:root {
+    --primary-color: #ff6b00;
+    --secondary-color: rgb(222, 72, 72);
+    --accent-color: #74b2db;
+
+    --background-color: #111111;
+    --card-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --text-light: #cfcfcf;
+    --text-muted: #a9a9a9;
+}
+
 /* Greeting Box */
 .greeting_box {
     display: grid;
@@ -165,7 +177,7 @@ video {
 .greetings:hover {
     transform: scale(1.05);
     /* Slightly enlarge the box when hovering */
-    box-shadow: 0 8px 12px rgba(178, 181, 180, 0.8);
+    box-shadow: 0 8px 12px var(--secondary-color);
     /* Add more prominent shadow on hover */
 }
 
@@ -181,13 +193,13 @@ video {
 
 .contact_me h3 {
     font-size: 2rem;
-    color: rgb(222, 72, 72);
+    color: var(--secondary-color);
     margin: 0;
 }
 
 .contact_me .vertical-line {
     width: 1px;
-    background-color: rgb(222, 72, 72);
+    background-color: var(--secondary-color);
     /* Red color for the line */
     height: 100%;
     /* Full height */
@@ -247,7 +259,7 @@ video {
     font-family: 'playfair display', serif;
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: rgb(222, 72, 72);
+    color: var(--secondary-color);
 
 }
 
@@ -273,14 +285,14 @@ video {
     transform: translateY(-10px);
     /* Lift the card on hover */
     background-color: rgb(0, 0, 0);
-    box-shadow: 0 4px 4px 4px rgb(222, 72, 72);
+    box-shadow: 0 4px 4px 4px var(--secondary-color);
     /* Stronger shadow on hover */
 }
 
 .skill-category h3 {
     font-size: 1rem;
     margin-bottom: 0.8rem;
-    color: rgb(222, 72, 72);
+    color: var(--accent-color);
     position: relative;
     /* Position relative for the line */
 }
@@ -296,7 +308,7 @@ video {
     /* Makes the line span the width of the header */
     height: 1px;
     /* Sets the thickness of the line */
-    background-color: rgb(222, 72, 72);
+    background-color: var(--accent-color);
     /* Line color */
 }
 

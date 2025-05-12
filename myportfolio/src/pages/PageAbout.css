@@ -1,238 +1,195 @@
+/* Reset and Box Sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
+/* Root Theme Variables */
 :root {
-    --primary-color: #e05409;
-    --secondary-color: #ffffff;
+    --primary-color: #ff6b00;
+    --secondary-color: rgb(222, 72, 72);
     --accent-color: #74b2db;
 
-    --background-color: #000000;
-    --text-color: #ffffff;
-    --text-light: #c6c5c5;
-    --text-muted: #c2bdbd;
+    --background-color: #111111;
+    --card-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --text-light: #cfcfcf;
+    --text-muted: #a9a9a9;
 }
 
 
+/* Font Enhancements */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #0d0d0d, #1c1c1c);
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
+/* Container for the about section */
+.about {
+    margin-top: 30rem;
+    padding: 2rem;
+}
 
+/* Grid layout */
 .about-me {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 2rem;
-    max-width: 1200px;
+    gap: 2rem;
+    max-width: 1000px;
     margin: 0 auto;
-    padding-top: 600px;
+    padding-top: 10rem;
     position: relative;
     z-index: 1;
 }
 
-/* For larger screens, adjust the grid layout to display two columns */
+/* Grid for larger screens */
 @media (min-width: 768px) {
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "about-article about-article"
-            "work work";
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 equal columns */
         gap: 2rem;
-        max-width: 90%;
+        max-width: 100%;
         margin: 0 auto;
+        padding: 2rem;
     }
 
-    .me {
-        grid-column: span 2;
-        margin: 0 auto;
-        width: 70%;
+    .me,
+    .work,
+    .education {
+        grid-column: auto;
+        width: 100%;
+        max-width: none;
     }
-
-    .work {
-        grid-column: 1/2;
-    }
-
-
 }
 
-/* Styling the about-article sections */
-.about-article {
-    background-color: var(--background-color);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-article:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* About heading styling */
-.about-article h3 {
-    font-family: 'Arial', sans-serif;
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* Intro paragraph styling */
-.about-intro {
-    font-family: 'Georgia', serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-}
-
-/* Styling the freetime section */
-.freetime h3 {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.freetime-intro {
-    font-family: 'Georgia', serif;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-}
-
-/* Work section styling */
+/* Card-style components */
 .me,
 .work,
 .education {
-    background-color: var(--background-color);
+    background: var(--card-color);
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Hover effect for the .me, .work, and .education sections */
+/* Artistic hover effect */
 .me:hover,
 .work:hover,
 .education:hover {
-    transform: translateY(-10px);
-    background-color: var(--secondary-color);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 40px var(--secondary-color);
 }
 
-/* Work heading */
-h3 {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
+/* Inner article styling */
+.about-article {
+    background: transparent;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Headings */
+.about-article h3,
+.freetime h3 {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
     margin-bottom: 1rem;
 }
 
-/* Work company heading styling */
+/* Paragraphs */
+.about-intro,
+.freetime-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Headings for inner sections */
 h4 {
-    font-family: 'Arial', sans-serif;
     font-size: 1.2rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-bottom: 0.5rem;
 }
 
-/* UL Styling */
+/* UL/LI Styling */
 .about ul {
     list-style: none;
-    margin-left: 1rem;
-    padding-left: 1rem;
-    border-left: 1px solid var(--primary-color);
-
+    border-left: 2px solid var(--accent-color);
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
 }
 
-/* LI Styling */
 .about ul li {
     position: relative;
-    font-family: 'Georgia', serif;
-    font-size: 1.1rem;
-    color: var(--text-light);
     margin-bottom: 1rem;
+    color: var(--text-muted);
     padding-left: 1.5rem;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .about ul li::before {
-    content: "★";
-    /* Custom bullet (can be emoji or icon font) */
+    content: "✦";
     position: absolute;
     left: 0;
     color: var(--primary-color);
-    font-size: 1rem;
-    transition: transform 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .about ul li:hover {
-    transform: translateX(10px);
     color: var(--text-color);
+    transform: translateX(10px);
 }
 
 .about ul li:hover::before {
-    transform: scale(1.3) rotate(10deg);
+    transform: rotate(15deg);
 }
 
-/* A Styling */
+/* Links */
 .about a {
     color: var(--accent-color);
     text-decoration: none;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px dashed var(--accent-color);
+    transition: all 0.3s ease;
 }
 
 .about a:hover {
     color: var(--primary-color);
-    transform: scale(1.05);
-    border-color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
-
-.about {
-
-    margin-top: 10rem;
-}
-
-
+/* Responsive tweaks */
 @media (max-width: 767px) {
-    .about-me {
-        grid-template-columns: 1fr;
-        grid-template-areas: none;
+
+    .about {
         margin-top: 60rem;
     }
 
-    .education {
-        grid-column: auto;
-        max-width: 100%;
-        margin: 0;
-
+    .about-me {
+        grid-template-columns: 1fr;
+        margin-top: 3rem;
     }
 
     .me {
-
-        margin-top: 30rem;
+        margin-top: 5rem;
     }
 
     .about-article h3 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
-    .about-intro {
+    .about-intro,
+    .freetime-intro {
         font-size: 1rem;
-    }
-
-
-
-    .freetime h3 {
-        font-size: 1.5rem;
     }
 }
