@@ -354,7 +354,7 @@ video {
     }
 }
 
-@media(max-width:660px) {
+@media (min-width:530px) and (max-width:660px) {
 
     .bg-video {
         margin-top: 30rem;
@@ -372,8 +372,10 @@ video {
 
 }
 
-@media(max-width:530px) {
-
+@media (min-width:465px) and (max-width:530px) {
+    .bg-video {
+        margin-top: 30rem;
+    }
 
 
     .greeting_name h1 {
@@ -399,23 +401,401 @@ video {
 
 
     .bg-video {
-        margin-top: 45rem;
+        margin-top: 40rem;
     }
 
     .greeting_name h1 {
-        margin-top: 1rem;
+        font-size: 1.2rem;
+        margin-top: -5rem;
     }
 
     .greeting_name h2 {
 
-        margin-bottom: 0;
-        margin-right: 4rem;
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Hero Section Styles */
+        #home {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+        }
+
+        :root {
+            --primary-color: #ff6b00;
+            --secondary-color: rgb(222, 72, 72);
+            --accent-color: #74b2db;
+            --background-color: #111111;
+            --card-color: #1a1a1a;
+            --text-color: #f4f4f4;
+            --text-light: #cfcfcf;
+            --text-muted: #a9a9a9;
+        }
+
+        /* Greeting Box */
+        .greeting_box {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        /* Greeting Message */
+        .greeting_message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Portrait Image */
+        #home img.portrait {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #f39c12;
+        }
+
+        /* Greeting Text */
+        .greeting_name h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-top: 30rem;
+            margin-bottom: 0;
+        }
+
+        .greeting_name h2 {
+            font-size: 2.5rem;
+            color: rgb(222, 72, 72);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 4s forwards;
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 10rem;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Background Video */
+        .bg-video {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: -1;
+        }
+
+        /* Contact Section */
+        .greetings {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            max-width: 700px;
+            background-color: #000000;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .greetings a {
+            margin: .5rem;
+        }
+
+        .greetings:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px var(--secondary-color);
+        }
+
+        /* Contact Me */
+        .contact_me {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 2rem;
+            width: 100%;
+            margin-top: 3rem;
+        }
+
+        .contact_me h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+
+        .contact_me .vertical-line {
+            width: 1px;
+            background-color: var(--secondary-color);
+            height: 100%;
+            margin: -1rem 2rem;
+        }
+
+        .contact_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact_text {
+            font-size: 1rem;
+            color: #fff;
+            margin: 0;
+        }
+
+        .socialmedia {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .socialmedia a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .socialmedia a:hover {
+            color: rgb(222, 72, 72);
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-family: 'playfair display', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background-color: rgb(47, 45, 45);
+            border-radius: 8px;
+            padding: 1rem;
+            width: 270px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0 4px 4px 4px var(--secondary-color);
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent-color);
+            position: relative;
+        }
+
+        .skill-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--accent-color);
+        }
+
+        .skill-category ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1rem;
+        }
+
+        .skill-category li {
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        /* Responsive Design for Small Screens */
+
+        /* General small screen adjustments */
+        @media (max-width: 930px) {
+            #home {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .greeting_box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .skills {
+                padding: 1rem;
+            }
+
+            .skills-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skill-category {
+                width: 80%;
+                max-width: 300px;
+            }
+
+            .greetings {
+                height: auto;
+                box-shadow: none;
+                padding: 1rem;
+            }
+
+            .greetings a {
+                margin-top: 0;
+                margin: 0.5rem;
+            }
+
+            .contact_text {
+                font-size: 0.9rem;
+            }
+
+            .socialmedia {
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+
+        /* Very small screens (e.g., below 600px) */
+        @media (max-width: 600px) {
+            .greeting_name h1 {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .greeting_name h2 {
+                font-size: 1.2rem;
+            }
+
+            .fade-in {
+                font-size: 1rem;
+            }
+
+            .contact_me {
+                margin-top: 5rem;
+                margin-bottom: 8rem;
+            }
+
+            .socialmedia a {
+                font-size: 1rem;
+            }
+
+            .skills-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .skill-category {
+                width: 90%;
+                max-width: 200px;
+                margin: 1rem auto;
+            }
+
+            .greetings h3 {
+                font-size: 1.2rem;
+            }
+
+            .contact_text {
+                font-size: 0.8rem;
+            }
+        }
+
+        text-wrap: nowrap;
+        margin-top: 1rem;
+        margin-right: 8rem;
+
     }
 
     .fade-in {
+        text-wrap: nowrap;
+        font-size: .8rem;
+        margin-right: 8rem;
 
-        margin-right: 4rem;
+    }
 
+    .contact_me {
+
+        margin-top: 5rem;
+        /* Space above the contact text */
+        margin-bottom: 10rem;
+        /* Space below the contact text */
     }
 
 }
@@ -446,32 +826,7 @@ video {
 
 
     /* Adjust Greeting Message on small screens */
-    .greeting_message {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /* Keep it centered */
-    }
 
-    .greeting_name h1 {
-        font-size: 2rem;
-    }
-
-    .greeting_name h2 {
-        font-size: 1.5rem;
-    }
-
-    .fade-in {
-        font-size: .75rem;
-        opacity: 1;
-        /* left: 50%; */
-        transform: translateX(-50%);
-        position: relative;
-        top: 0;
-        margin-left: 300px;
-        text-align: center;
-        transform: none;
-    }
 
     .skills {
         padding: 0;
@@ -555,24 +910,6 @@ video {
 
 @media (max-width: 600px) {
 
-
-    .greeting_message {
-        margin-right: 5rem;
-    }
-
-    .greeting_name h1 {
-        margin-top: 0;
-        font-size: 1.5rem;
-    }
-
-    .greeting_name h2 {
-        font-size: 1.2rem;
-    }
-
-    .fade-in {
-        font-size: 0.8rem;
-    }
-
     .skills-container {
         padding: 1rem;
         margin: 0 auto;
@@ -610,4 +947,60 @@ video {
     .contact_text {
         font-size: 0.7rem;
     }
+}
+
+@media (max-width: 600px) {
+
+    .bg-video {
+        min-height: 40vh;
+        width: 100vw;
+    }
+
+    .greeting_name h1 {
+        font-size: 1.5rem;
+        /* Smaller font size for h1 */
+        margin-top: 0;
+        /* Reduce margin-top for better alignment */
+    }
+
+    .greeting_name h2 {
+        font-size: 1.2rem;
+        /* Adjust font size for h2 */
+        margin-top: 1rem;
+        /* Space between h1 and h2 */
+        margin-bottom: 1rem;
+        /* Add margin-bottom for spacing */
+    }
+
+    .fade-in {
+        font-size: .8rem;
+
+
+    }
+}
+
+@media (min-width:464px) and (max-width: 470px) {
+    .bg-video {
+        margin-top: 30rem;
+    }
+
+    .greeting_message {
+        margin-top: 0;
+        text-wrap: nowrap;
+    }
+
+
+}
+
+@media (max-width: 464px) {
+    .bg-video {
+        margin-top: 50rem;
+    }
+
+    .greeting_message {
+        margin-top: 0;
+        text-wrap: nowrap;
+    }
+
+
 }

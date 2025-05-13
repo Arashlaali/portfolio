@@ -17,7 +17,7 @@ function PageHome() {
             <meta name="description" content="Welcome to my portfolio" />
             <div className='bg-video'>
                 <div className='overlay'></div>
-                <video src={videoBg} autoPlay loop muted />
+                <video src={videoBg} autoPlay loop muted playsInline />
                 <div className='greeting_box'>
                     {/* <img className="portrait" src={portraitImage} alt="my portrait" /> */}
                     <div className='greeting_message'>
