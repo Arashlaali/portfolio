@@ -172,12 +172,11 @@ h4 {
 @media (max-width: 767px) {
 
     .about {
-        margin-top: 60rem;
+        margin-top: 130rem;
     }
 
     .about-me {
         grid-template-columns: 1fr;
-        margin-top: 3rem;
     }
 
     .me {
@@ -192,4 +191,18 @@ h4 {
     .freetime-intro {
         font-size: 1rem;
     }
+}
+
+@media (max-width:440px) {
+    .about {
+        margin-top: 30rem;
+        /* or a more appropriate value */
+    }
+
+    .about-me {
+        margin-top: 120rem;
+
+    }
+
+
 }
