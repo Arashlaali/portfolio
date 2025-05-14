@@ -1,0 +1,53 @@
+{
+    "greeting": {
+        "title": "Hello, I'm",
+        "name": "ARASH LAALI",
+        "subtitle": "Software Developer currently based in Berlin, Germany"
+    },
+    "skills": {
+        "heading": "Skills",
+        "categories": [
+            {
+                "title": "Core Technical Skills",
+                "items": [
+                    "HTML5",
+                    "CSS3",
+                    "JavaScript ES6"
+                ]
+            },
+            {
+                "title": "Framework & Libraries",
+                "items": [
+                    "React.js",
+                    "Vue.js",
+                    "jQuery"
+                ]
+            },
+            {
+                "title": "Design & UX/UI Skills",
+                "items": [
+                    "Responsive Design",
+                    "Figma",
+                    "Adobe XD"
+                ]
+            },
+            {
+                "title": "Build Tools & Version Control",
+                "items": [
+                    "Git",
+                    "GitHub",
+                    "Vite"
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "heading": "Let's Chat",
+        "text": "Please feel free to contact me via LinkedIn or Email. I’m always looking forward to an insightful conversation over coffee! ☕",
+        "socialLinks": {
+            "linkedin": "https://www.linkedin.com/in/arash-laali-03746b31/",
+            "github": "https://github.com/Arashlaali",
+            "email": "mailto:arash.laali@gmail.com"
+        }
+    }
+}

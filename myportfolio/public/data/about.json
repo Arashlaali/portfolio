@@ -1,0 +1,55 @@
+{
+    "aboutMe": {
+        "title": "About Me",
+        "intro": "Hi, I’m Arash — a Front-End Web Developer with a Creative Edge.\nI'm a qualified and passionate web developer, recently graduated from the Front-End Web Development program at BCIT. With a unique blend of technical precision from 7 years in mechanical engineering and creative vision as a fashion photographer, I bring both analytical thinking and artistic flair to every project. I'm a detail-oriented team player who thrives on building clean, responsive, and visually compelling digital experiences.",
+        "freetimeTitle": "Being Creative in My Free Time",
+        "freetimeIntro": "Beyond the Code.\nIn my free time, I dive deep into the world of art — exploring galleries, attending photography workshops, and capturing stories through the lens. I’m also passionate about backcountry camping and traveling to discover historic and artistic landscapes around the world. These experiences fuel my creativity and inspire the design work I bring to the web."
+    },
+    "workExperience": [
+        {
+            "title": "Photographer",
+            "company": "Self-Employed",
+            "period": "March 2021 - Present",
+            "responsibilities": [
+                "Performing E-commerce, Fashion, Lifestyle, Wedding, and Portrait photography sessions for clients across Canada, the United States, and Europe.",
+                "Collaborating closely with models, designers, stylists, and creative directors to produce high-quality visual content tailored to brand aesthetics and client goals."
+            ]
+        },
+        {
+            "title": "Sales Engineer",
+            "company": "Olympic Controls",
+            "period": "March 2020 - April 2022",
+            "responsibilities": [
+                "Designed mechanical control systems for large residential/commercial projects in the Vancouver area.",
+                "Prepared proposals, quotations and Bill of Materials.",
+                "Performed weekly follow-up meetings with customers."
+            ]
+        },
+        {
+            "title": "HVAC Engineer",
+            "company": "M & G Duravent",
+            "period": "September 2016 - March 2020",
+            "responsibilities": [
+                "Developed quotes and system design for HVAC & plumbing systems for commercial and residential projects in the United States.",
+                "Supervised manufacturing process of the designed parts in manufacturing facility at Montreal Quebec."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "BCIT (British Columbia Institute of Technology)",
+            "period": "October 2024 - May 2025",
+            "degree": "Front-End Web Development Certificate"
+        },
+        {
+            "school": "Herzing College",
+            "period": "September 2011 – May 2013",
+            "degree": "Computer Aided Design (CAD) Diploma"
+        },
+        {
+            "school": "Aachen University of Applied Sciences",
+            "period": "September 2004 – December 2008",
+            "degree": "Bachelor of Applied Science - Mechanical Engineering"
+        }
+    ]
+}

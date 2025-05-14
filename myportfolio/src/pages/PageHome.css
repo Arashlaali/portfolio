@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-
 }
 
 body {
@@ -12,25 +11,18 @@ body {
     color: #ffffff;
     line-height: 1.6;
     min-height: 100vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     position: relative;
 }
 
 /* Hero Section Styles */
 #home {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 100vw;
     height: 100vh;
-    width: 100%;
-
-    text-align: center;
+    overflow: hidden;
 }
 
+/* Variables for color */
 :root {
     --primary-color: #ff6b00;
     --secondary-color: rgb(222, 72, 72);
@@ -43,101 +35,149 @@ body {
     --text-muted: #a9a9a9;
 }
 
-/* Greeting Box */
-.greeting_box {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-    align-items: center;
+/* Background Video */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    text-align: center;
-}
-
-/* Make greeting_message relative to the video */
-.greeting_message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-/* Portrait Image */
-#home img.portrait {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #f39c12;
-}
-
-/* Greeting Text */
-.greeting_name h1 {
-    position: relative;
-    font-size: 3rem;
-    color: #ffffff;
-    margin-top: 30rem;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-.greeting_name h2 {
-    position: relative;
-    font-size: 2.5rem;
-    color: rgb(222, 72, 72);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 300px;
-    padding-top: 0;
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 4s forwards;
-    font-size: 1.2rem;
-    color: #ffffff;
-    position: relative;
-    top: 0;
-    margin-left: 300px;
-    margin-bottom: 10rem;
-    text-align: center;
-    transform: none;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Background Video */
-
-.bg-video {
-    width: 100vw;
-    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    /* Keep the video at the back */
 }
 
 video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* Overlay */
-.overlay {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
+    /* Ensure video stays in the background */
+}
+
+/* Greeting Message (absolute positioning within #home) */
+.greeting_message {
+    position: absolute;
+    /* Ensure it's positioned relative to #home */
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: -1;
+    text-align: center;
+    z-index: 2;
+    /* Ensure it's above the video */
+}
+
+/* Center h1 in the middle of the video */
+.greeting_message h1 {
+    position: relative;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 3;
+}
+
+/* Position h2 below and to the right of h1 */
+.greeting_message h2 {
+    position: relative;
+    top: 3.25rem;
+    /* Adjust this as needed */
+    left: 5rem;
+    /* Adjust for positioning */
+    font-size: 2rem;
+    color: var(--secondary-color);
+    z-index: 3;
+    /* Ensure h2 stays above the video */
+}
+
+/* Position p directly below h2 */
+.fade-in {
+    position: relative;
+    top: 3.25rem;
+    /* Adjust this as needed */
+    left: 5rem;
+
+    z-index: 3;
+    /* Ensure h2 stays above the video */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Skills Section */
+.skills {
+    padding: 2rem;
+    margin-top: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.skills h2 {
+    font-family: 'playfair display', serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    gap: 2rem;
+}
+
+.skill-category {
+    align-items: center;
+    text-align: center;
+    background-color: rgb(47, 45, 45);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 4px 4px 4px var(--secondary-color);
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+    position: relative;
+}
+
+.skill-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--accent-color);
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.skill-category li {
+    margin-bottom: 0.5rem;
+    color: #fff;
 }
 
 /* Greetings Box Styling */
@@ -146,39 +186,21 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
-
-    max-width: 700px;
-    /* Limit the width */
+    width: 60%;
     background-color: #000000;
-    /* Background for the box */
     border-radius: 10px;
-
-    /* Rounded corners */
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
-    /* Space around the greetings box */
+    margin: 0 auto;
     position: relative;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 1rem;
-    margin-bottom: 0;
 }
-
-.greetings a {
-    margin: .5rem;
-
-    /* Add gap between anchor links (social media and email links) */
-}
-
-
 
 .greetings:hover {
     transform: scale(1.05);
-    /* Slightly enlarge the box when hovering */
     box-shadow: 0 8px 12px var(--secondary-color);
-    /* Add more prominent shadow on hover */
 }
 
 .contact_me {
@@ -188,7 +210,6 @@ video {
     gap: 2rem;
     width: 100%;
     margin-top: 3rem;
-    margin-bottom: 0;
 }
 
 .contact_me h3 {
@@ -200,11 +221,8 @@ video {
 .contact_me .vertical-line {
     width: 1px;
     background-color: var(--secondary-color);
-    /* Red color for the line */
     height: 100%;
-    /* Full height */
     margin: -1rem 2rem;
-    /* Adds spacing around the vertical line */
 }
 
 .contact_content {
@@ -219,7 +237,6 @@ video {
     font-size: 1rem;
     color: #fff;
     margin: 0;
-    padding: 0;
 }
 
 .socialmedia {
@@ -227,7 +244,6 @@ video {
     gap: 1rem;
     align-items: center;
     padding: 0;
-    margin: 0;
 }
 
 .socialmedia a {
@@ -240,766 +256,113 @@ video {
 }
 
 .contact_me p {
-
     color: #fff;
     margin-top: 0;
     margin-bottom: 2rem;
-    /* Space above the contact text */
 }
-
-/*  skill section */
-
-.skills {
-    padding: 2rem;
-    margin-top: 3rem;
-    text-align: center;
-}
-
-.skills h2 {
-    font-family: 'playfair display', serif;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--secondary-color);
-
-}
-
-.skills-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.skill-category {
-    background-color: rgb(47, 45, 45);
-    border-radius: 8px;
-    padding: 1rem;
-    width: 270px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    /* Smooth transition for hover effect */
-    cursor: pointer;
-}
-
-.skill-category:hover {
-    transform: translateY(-10px);
-    /* Lift the card on hover */
-    background-color: rgb(0, 0, 0);
-    box-shadow: 0 4px 4px 4px var(--secondary-color);
-    /* Stronger shadow on hover */
-}
-
-.skill-category h3 {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-    color: var(--accent-color);
-    position: relative;
-    /* Position relative for the line */
-}
-
-.skill-category h3::after {
-    content: '';
-    /* Creates the pseudo-element for the line */
-    position: absolute;
-    bottom: -5px;
-    /* Places the line just below the text */
-    left: 0;
-    width: 100%;
-    /* Makes the line span the width of the header */
-    height: 1px;
-    /* Sets the thickness of the line */
-    background-color: var(--accent-color);
-    /* Line color */
-}
-
-.skill-category ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1rem;
-}
-
-.skill-category li {
-    margin-bottom: 0.5rem;
-    color: #fff;
-}
-
 
 /* Responsive Design */
 
-@media (min-width:1240px)and (max-width:2000px) {
-
-    .bg-video {
-        margin-top: 30rem;
-    }
-}
-
-@media (min-width:650px) and (max-width:1240px) {
-
-    .bg-video {
-        margin-top: 30rem;
-    }
-
-    .greeting_name h1 {
-        font-size: 2.5rem;
+@media (max-width: 1300px) {
+    .greeting_message h1 {
         margin-top: 10rem;
+        font-size: 2.5rem;
     }
 
-    .greeting_name h2 {
-        font-size: 2rem;
-    }
-
-    .fade-in {
-        font-size: 1rem;
-
-    }
-}
-
-@media (min-width:530px) and (max-width:660px) {
-
-    .bg-video {
-        margin-top: 30rem;
-    }
-
-    .greeting_name h1 {
-        font-size: 2rem;
-        margin-top: 2rem;
-    }
-
-    .greeting_name h2 {
+    .greeting_message h2 {
         font-size: 1.5rem;
-        margin-bottom: 0;
     }
+
 
 }
 
-@media (min-width:465px) and (max-width:530px) {
-    .bg-video {
-        margin-top: 30rem;
-    }
-
-
-    .greeting_name h1 {
+@media (max-width: 940px) {
+    .greeting_message h1 {
+        margin-top: 15rem;
         font-size: 2rem;
-        margin-top: 2rem;
     }
 
-    .greeting_name h2 {
-        font-size: 1.5rem;
-        margin-bottom: 0;
-        margin-right: 1rem;
+    .greeting_message h2 {
+        font-size: 1.3rem;
     }
 
-    .fade-in {
-        margin-right: 1rem;
-
-    }
-
-}
-
-
-@media(max-width:465px) {
-
-
-    .bg-video {
-        margin-top: 40rem;
-    }
-
-    .greeting_name h1 {
-        font-size: 1.2rem;
-        margin-top: -5rem;
-    }
-
-    .greeting_name h2 {
-
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            line-height: 1.6;
-            min-height: 100vh;
-            position: relative;
-        }
-
-        /* Hero Section Styles */
-        #home {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            width: 100%;
-            text-align: center;
-        }
-
-        :root {
-            --primary-color: #ff6b00;
-            --secondary-color: rgb(222, 72, 72);
-            --accent-color: #74b2db;
-            --background-color: #111111;
-            --card-color: #1a1a1a;
-            --text-color: #f4f4f4;
-            --text-light: #cfcfcf;
-            --text-muted: #a9a9a9;
-        }
-
-        /* Greeting Box */
-        .greeting_box {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-        }
-
-        /* Greeting Message */
-        .greeting_message {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        /* Portrait Image */
-        #home img.portrait {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #f39c12;
-        }
-
-        /* Greeting Text */
-        .greeting_name h1 {
-            font-size: 3rem;
-            color: #ffffff;
-            margin-top: 30rem;
-            margin-bottom: 0;
-        }
-
-        .greeting_name h2 {
-            font-size: 2.5rem;
-            color: rgb(222, 72, 72);
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 4s forwards;
-            font-size: 1.2rem;
-            color: #ffffff;
-            margin-bottom: 10rem;
-            text-align: center;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Background Video */
-        .bg-video {
-            width: 100vw;
-            height: 100vh;
-        }
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Overlay */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: -1;
-        }
-
-        /* Contact Section */
-        .greetings {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 70%;
-            max-width: 700px;
-            background-color: #000000;
-            border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 1rem 0;
-            position: relative;
-            text-align: center;
-        }
-
-        .greetings a {
-            margin: .5rem;
-        }
-
-        .greetings:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px var(--secondary-color);
-        }
-
-        /* Contact Me */
-        .contact_me {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 2rem;
-            width: 100%;
-            margin-top: 3rem;
-        }
-
-        .contact_me h3 {
-            font-size: 2rem;
-            color: var(--secondary-color);
-            margin: 0;
-        }
-
-        .contact_me .vertical-line {
-            width: 1px;
-            background-color: var(--secondary-color);
-            height: 100%;
-            margin: -1rem 2rem;
-        }
-
-        .contact_content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact_text {
-            font-size: 1rem;
-            color: #fff;
-            margin: 0;
-        }
-
-        .socialmedia {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .socialmedia a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .socialmedia a:hover {
-            color: rgb(222, 72, 72);
-        }
-
-        /* Skills Section */
-        .skills {
-            padding: 2rem;
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        .skills h2 {
-            font-family: 'playfair display', serif;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--secondary-color);
-        }
-
-        .skills-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background-color: rgb(47, 45, 45);
-            border-radius: 8px;
-            padding: 1rem;
-            width: 270px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
-            background-color: rgb(0, 0, 0);
-            box-shadow: 0 4px 4px 4px var(--secondary-color);
-        }
-
-        .skill-category h3 {
-            font-size: 1rem;
-            margin-bottom: 0.8rem;
-            color: var(--accent-color);
-            position: relative;
-        }
-
-        .skill-category h3::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: var(--accent-color);
-        }
-
-        .skill-category ul {
-            list-style-type: none;
-            padding: 0;
-            font-size: 1rem;
-        }
-
-        .skill-category li {
-            margin-bottom: 0.5rem;
-            color: #fff;
-        }
-
-        /* Responsive Design for Small Screens */
-
-        /* General small screen adjustments */
-        @media (max-width: 930px) {
-            #home {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .greeting_box {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            .skills {
-                padding: 1rem;
-            }
-
-            .skills-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .skill-category {
-                width: 80%;
-                max-width: 300px;
-            }
-
-            .greetings {
-                height: auto;
-                box-shadow: none;
-                padding: 1rem;
-            }
-
-            .greetings a {
-                margin-top: 0;
-                margin: 0.5rem;
-            }
-
-            .contact_text {
-                font-size: 0.9rem;
-            }
-
-            .socialmedia {
-                justify-content: center;
-                gap: 1rem;
-            }
-        }
-
-        /* Very small screens (e.g., below 600px) */
-        @media (max-width: 600px) {
-            .greeting_name h1 {
-                font-size: 1.5rem;
-                margin-top: 2rem;
-            }
-
-            .greeting_name h2 {
-                font-size: 1.2rem;
-            }
-
-            .fade-in {
-                font-size: 1rem;
-            }
-
-            .contact_me {
-                margin-top: 5rem;
-                margin-bottom: 8rem;
-            }
-
-            .socialmedia a {
-                font-size: 1rem;
-            }
-
-            .skills-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-
-            .skill-category {
-                width: 90%;
-                max-width: 200px;
-                margin: 1rem auto;
-            }
-
-            .greetings h3 {
-                font-size: 1.2rem;
-            }
-
-            .contact_text {
-                font-size: 0.8rem;
-            }
-        }
-
-        text-wrap: nowrap;
-        margin-top: 1rem;
-        margin-right: 8rem;
-
-    }
-
-    .fade-in {
-        text-wrap: nowrap;
+    .fade-in p {
         font-size: .8rem;
-        margin-right: 8rem;
-
-    }
-
-    .contact_me {
-
-        margin-top: 5rem;
-        /* Space above the contact text */
-        margin-bottom: 10rem;
-        /* Space below the contact text */
     }
 
 }
 
-
-
-
-
-@media (max-width: 930px) {
-    #home {
-        flex-direction: column;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .greeting_box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-    }
-
-
-
-    /* Adjust Greeting Message on small screens */
-
-
-    .skills {
-        padding: 0;
-        margin-top: 2rem;
-        text-align: center;
-        margin-bottom: 0;
-    }
-
-    .skill-category {
-        width: 60%;
-        max-width: 300px;
-        margin: 0 auto;
-        /* Center the skill category */
-    }
-
-    /* Adjust .greetings height to 20% of the screen height on small screens */
-    .greetings {
-        height: 30vh;
-        padding: 1rem;
-        background-color: transparent;
-        box-shadow: none;
-    }
-
-    .greetings a {
-        margin-top: 0;
-        ;
-        margin: 0.5rem;
-        /* Reduced gap between anchor links on small screens */
-    }
-
-    .greetings h3 {
-        font-family: 'playfair display', serif;
-        margin-top: 1rem;
-        font-size: 1.5rem;
-        /* Adjust the font size of the greeting text */
-    }
-
-    /* Adjust the contact text font size on small screens */
-    .contact_text {
-        font-size: 0.8rem;
-        color: #333;
-
-
-        /* Smaller font size */
-    }
-
-    .contact_me h3 {
-        font-size: 1.5rem;
-        margin-top: 0;
-        /* Space above the greeting text */
-        margin-bottom: 0;
-        /* Space below the greeting text */
-    }
-
-    .contact_me p {
-        font-size: .8rem;
-        margin-top: 0;
-        /* Space above the greeting text */
-        margin-bottom: .2rem;
-        /* Space below the greeting text */
-    }
-
-    .socialmedia {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-
-        /* Space between social media icons */
-    }
-
-
-    /* Adjust the font size of the social media links */
-    .socialmedia a {
-        font-size: .5rem;
-        margin-top: 0;
-
-
-    }
-}
-
-@media (max-width: 600px) {
-
+@media (max-width: 768px) {
     .skills-container {
-        padding: 1rem;
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        padding: 0.5rem 1rem;
+        justify-items: center;
+
+    }
+
+    .skills h2 {
+
         margin: 0 auto;
+        justify-content: center;
+        align-items: center;
     }
 
     .skill-category {
-        width: 60%;
-        max-width: 200px;
-        margin: 0 auto;
-        padding: .3rem;
+        width: 200px;
+        padding: 0.75rem;
 
-    }
-
-    .greetings {
-        box-shadow: none;
-    }
-
-    .greetings:hover {
-        box-shadow: none;
-        transform: none;
     }
 
     .skill-category h3 {
-        font-size: .8rem;
+        font-size: 0.9rem;
     }
 
     .skill-category ul {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
-    .contact_me h3 {
-        font-size: 1.2rem;
+    .skills h2 {
+        font-size: 1.3rem;
+    }
+
+    .greetings {
+        width: 60%;
+        padding: 1rem;
+    }
+
+    .contact_me {
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact_text {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .socialmedia svg {
+        width: 28px;
+        height: 28px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 470px) {
 
-    .bg-video {
-        min-height: 40vh;
-        width: 100vw;
+
+
+    .skill-category h3 {
+        font-size: 0.75rem;
     }
 
-    .greeting_name h1 {
-        font-size: 1.5rem;
-        /* Smaller font size for h1 */
-        margin-top: 0;
-        /* Reduce margin-top for better alignment */
+    .skill-category ul {
+        font-size: 0.75rem;
     }
 
-    .greeting_name h2 {
-        font-size: 1.2rem;
-        /* Adjust font size for h2 */
-        margin-top: 1rem;
-        /* Space between h1 and h2 */
-        margin-bottom: 1rem;
-        /* Add margin-bottom for spacing */
-    }
-
-    .fade-in {
-        font-size: .8rem;
-
-
-    }
-}
-
-@media (min-width:464px) and (max-width: 470px) {
-    .bg-video {
-        margin-top: 30rem;
-    }
-
-    .greeting_message {
-        margin-top: 0;
-        text-wrap: nowrap;
-    }
-
-
-}
-
-@media (max-width: 464px) {
-    .bg-video {
-        margin-top: 50rem;
-    }
-
-    .greeting_message {
-        margin-top: 0;
-        text-wrap: nowrap;
+    .skills h2 {
+        font-size: 1.3rem;
     }
 
 
