@@ -1,0 +1,43 @@
+{
+    "pageTitle": "Projects | Portfolio",
+    "metaDescription": "My projects",
+    "sectionTitle": "Featured Projects",
+    "projects": [
+        {
+            "title": "Artist Portfolio",
+            "url": "https://fotografiearash.bcitwebdeveloper.ca/",
+            "image": "fotografie.jpg",
+            "techStack": [
+                "WordPress",
+                "PHP",
+                "HTML",
+                "CSS",
+                "GitHub"
+            ],
+            "description": "Fotografie Arash is a portfolio website designed for an artist. It showcases his work and provides information about his photography services. The website is built using WordPress, PHP, HTML, and CSS, ensuring a professional and visually appealing presentation."
+        },
+        {
+            "title": "Wack A Mole Game",
+            "url": "https://arash-laali.com/wack-a-mole/",
+            "image": "wackamole.jpg",
+            "techStack": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "description": "Wack A Mole is an entertaining game written with JavaScript, HTML, and CSS. The objective is to hit the moles that pop up from their holes. The game is designed to be fun and engaging for children, helping them develop their hand-eye coordination and reflexes."
+        },
+        {
+            "title": "Cinematic Wonders",
+            "url": "https://arash-laali.com/cinematic-wonders",
+            "image": "movie.png",
+            "techStack": [
+                "React JS",
+                "JavaScript",
+                "SASS",
+                "GitHub API"
+            ],
+            "description": "Cinematic Wonders is a movie database application built with React JS. It allows users to search for movies, view details, and explore various genres. The app fetches data from the GitHub API, providing a seamless experience for movie enthusiasts."
+        }
+    ]
+}

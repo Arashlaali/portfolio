@@ -8,6 +8,16 @@ import fotografieImage from '../images/fotografie.jpg';
 
 function PageProjects() {
 
+    const [content, setContent] = useState(null);
+
+    useEffect(() => {
+        fetch('/data/projects.json')
+            .then((response) => response.json())
+            .then((data) => setContent(data));
+    }, []);
+
+    if (!content) return <div>Loading...</div>;
+
     return (
         <main id="projects">
             <title>Projects | Portfolio</title>

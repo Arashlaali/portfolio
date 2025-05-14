@@ -16,6 +16,8 @@
     --text-color: #f4f4f4;
     --text-light: #cfcfcf;
     --text-muted: #a9a9a9;
+    --heading-font: 'Unica One', cursive;
+    --paragraph-font: 'Josefin Sans', sans-serif;
 }
 
 
@@ -100,6 +102,7 @@ body {
 /* Headings */
 .about-article h3,
 .freetime h3 {
+    font-family: var(--heading-font);
     font-size: 2rem;
     color: var(--secondary-color);
     text-align: center;

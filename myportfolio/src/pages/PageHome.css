@@ -33,7 +33,10 @@ body {
     --text-color: #f4f4f4;
     --text-light: #cfcfcf;
     --text-muted: #a9a9a9;
+    --heading-font: 'Unica One', cursive;
+    --paragraph-font: 'Josefin Sans', sans-serif;
 }
+
 
 /* Background Video */
 .bg-video {
@@ -73,6 +76,7 @@ video {
 
 /* Center h1 in the middle of the video */
 .greeting_message h1 {
+    font-family: var(--heading-font);
     position: relative;
     font-size: 3rem;
     color: #fff;
@@ -81,6 +85,7 @@ video {
 
 /* Position h2 below and to the right of h1 */
 .greeting_message h2 {
+    font-family: var(--heading-font);
     position: relative;
     top: 3.25rem;
     /* Adjust this as needed */
@@ -94,6 +99,7 @@ video {
 
 /* Position p directly below h2 */
 .fade-in {
+    font-family: var(--paragraph-font);
     position: relative;
     top: 3.25rem;
     /* Adjust this as needed */
@@ -119,7 +125,7 @@ video {
 }
 
 .skills h2 {
-    font-family: 'playfair display', serif;
+    font-family: var(--heading-font);
     font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--secondary-color);
@@ -213,6 +219,7 @@ video {
 }
 
 .contact_me h3 {
+    font-family: var(--heading-font);
     font-size: 2rem;
     color: var(--secondary-color);
     margin: 0;

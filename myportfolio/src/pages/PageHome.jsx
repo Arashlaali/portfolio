@@ -5,6 +5,12 @@ import portraitImage from '../images/myportrait.jpg'; // Import your portrait im
 import videoBg from '../assets/bg-movie.mp4'; // Import your video background
 import { Helmet } from 'react-helmet';
 
+<Helmet>
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Unica+One&display=swap" rel="stylesheet" />
+</Helmet>
+
+
 function PageHome() {
     const [content, setContent] = useState(null);
 
