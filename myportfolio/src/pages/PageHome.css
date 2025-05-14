@@ -34,6 +34,7 @@ body {
     --text-light: #cfcfcf;
     --text-muted: #a9a9a9;
     --heading-font: 'Unica One', cursive;
+    --heading-font-2: 'Playfair Display', serif;
     --paragraph-font: 'Josefin Sans', sans-serif;
 }
 
@@ -85,7 +86,7 @@ video {
 
 /* Position h2 below and to the right of h1 */
 .greeting_message h2 {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font-2);
     position: relative;
     top: 3.25rem;
     /* Adjust this as needed */
@@ -159,6 +160,7 @@ video {
 }
 
 .skill-category h3 {
+    font-family: var(--heading-font-2);
     font-size: 1rem;
     margin-bottom: 0.8rem;
     color: var(--accent-color);
@@ -359,6 +361,12 @@ video {
 @media (max-width: 470px) {
 
 
+    .fade-in p {
+        width: 40%;
+        margin: 0 auto;
+
+    }
+
 
     .skill-category h3 {
         font-size: 0.75rem;
@@ -369,7 +377,30 @@ video {
     }
 
     .skills h2 {
-        font-size: 1.3rem;
+        font-size: 1.75rem;
+        margin-right: 4rem;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .greetings {
+        padding: 1rem;
+        height: 275px;
+        align-items: center;
+        margin-right: 8rem;
+    }
+
+    .contact_me {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .contact_me h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
     }
 
 
