@@ -126,7 +126,7 @@ video {
 }
 
 .skills h2 {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font-2);
     font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--secondary-color);
