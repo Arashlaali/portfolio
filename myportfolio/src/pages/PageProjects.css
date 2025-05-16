@@ -224,6 +224,54 @@ body {
     box-shadow: 0 4px 4px 4px var(--secondary-color);
 }
 
+
+/* Collapsible paragraph */
+.collapsible-text {
+    max-height: 4.5em;
+    /* about 3 lines */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.5s ease;
+}
+
+.collapsible-text.expanded {
+    max-height: 500px;
+    /* arbitrarily large max height for full expansion */
+}
+
+/* Toggle button styling */
+.toggle-button {
+    margin-top: 10px;
+    background-color: transparent;
+    color: #00bfff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+    font-family: 'Georgia', serif;
+    transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+    color: #0073e6;
+}
+
+.collapsible-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2em;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, black);
+    pointer-events: none;
+}
+
+.collapsible-text.expanded::after {
+    display: none;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #container {

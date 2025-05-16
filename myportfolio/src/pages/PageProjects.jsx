@@ -15,12 +15,24 @@ const imageMap = {
 
 function PageProjects() {
     const [content, setContent] = useState(null);
+    const [expanded, setExpanded] = useState([]); // track expanded description 
 
     useEffect(() => {
         fetch('/data/projects.json')
             .then((response) => response.json())
-            .then((data) => setContent(data));
+            .then((data) => {
+                setContent(data);
+                setExpanded(new Array(data.projects.length).fill(false)); // Initialize all collapsed
+            });
     }, []);
+
+    const toggleExpand = (index) => {
+        setExpanded((prev) => {
+            const updated = [...prev];
+            updated[index] = !updated[index];
+            return updated;
+        });
+    };
 
     if (!content) return <div>Loading...</div>;
 
@@ -54,7 +66,12 @@ function PageProjects() {
                                         ))}
                                     </ul>
                                     <article className='project-bio'>
-                                        {project.description}
+                                        <p className={`collapsible-text ${expanded[index] ? 'expanded' : ''}`}>
+                                            {project.description}
+                                        </p>
+                                        <button className="toggle-button" onClick={() => toggleExpand(index)}>
+                                            {expanded[index] ? 'Show less' : 'Read more'}
+                                        </button>
                                     </article>
                                 </div>
                             </React.Fragment>
